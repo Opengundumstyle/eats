@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.login = login;
   window.logout = logout;
 
-  const store = configureStore()
+ let store = configureStore()
   console.log(store.getState())
   
   if (window.currentUser) {
@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   const root = document.getElementById("root");
-  // ReactDOM.render(<Root store={store}/>, root);
-  ReactDOM.render(<h1>Heroku</h1>, root);
-  
+  ReactDOM.render(<Root store={store}/>, root);
+  // ReactDOM.render(<h1>Heroku</h1>, root);
+
 });
 
 
