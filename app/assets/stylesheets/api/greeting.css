@@ -1,0 +1,15 @@
+
+.header-link {
+    color:rgb(232, 62, 62);
+    font-size: 40px;
+}
+
+
+a:link { text-decoration: none; }
+
+
+.login-signup{
+     position:absolute;
+     top:30px;
+     left:85%
+}
