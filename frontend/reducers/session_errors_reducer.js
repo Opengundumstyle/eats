@@ -6,12 +6,13 @@ import{
 
 const sessionErrorReducer = (state=[],action)=>{
     Object.freeze(state);
-   
+   console.log("action", action)
+   console.log("actiontype", action.type)
     switch (action.type){
         case RECEIVE_SESSION_ERRORS:
-            return action.errors
+            return action.errors;
         case RECEIVE_CURRENT_USER:
-             return []
+             return [];
         default:
             return state;
     }
