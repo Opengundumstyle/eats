@@ -30,7 +30,7 @@ export const signup = formUser => dispatch => {
 export const login = formUser => dispatch => (
         SessionAPIUtil.login(formUser)
         .then(user => dispatch(receiveCurrentUser(user)),
-        err => (  dispatch(receiveErrors(err.responseJSON)))
+        err => (dispatch(receiveErrors(err.responseJSON)))
        ))
 
  export const logout = () => dispatch =>(

@@ -4,11 +4,13 @@ import configureStore from "./store/store";
 import Root from './components/root';
 // import { signup, login, logout } from './util/session_api_util';
 import {login, logout, signup } from './actions/session_actions'
+import {getAllBusinesses} from './util/businesses_api_util'
 document.addEventListener("DOMContentLoaded", () => {
 
   window.signup= signup;
   window.login = login;
   window.logout = logout;
+  window.getAllBusinesses = getAllBusinesses
   
  let store = configureStore()
   console.log(store.getState())
