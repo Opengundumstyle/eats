@@ -6,7 +6,8 @@ class Business < ApplicationRecord
       through: :tags,
       source: :category
 
-
+       has_one_attached :photo
+       
       
 
 

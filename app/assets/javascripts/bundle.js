@@ -327,7 +327,10 @@ var BusinessIndex = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, this.props.businesses.map(function (business) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_business_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           business: business,
-          key: business.id
+          key: business.id,
+          price: business.price,
+          openhour: business.openhour,
+          closehour: business.closehour
         });
       }));
     }
@@ -441,7 +444,11 @@ var IndexItem = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var name = this.props.business.name;
+      var _this$props$business = this.props.business,
+          name = _this$props$business.name,
+          price = _this$props$business.price,
+          openhour = _this$props$business.openhour,
+          closehour = _this$props$business.closehour;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "bench-index-item",
         onClick: this.handleClick
@@ -453,8 +460,9 @@ var IndexItem = /*#__PURE__*/function (_React$Component) {
         className: "index-item-copy"
       }, "No rating yet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "index-item-category"
-      }, "Descriptions:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-        src: "https://imagevars.gulfnews.com/2022/01/17/boba-tea-bubble-tea-stock_17e6738fd49_medium.jpg"
+      }, "Descriptions:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "".concat(openhour, "-").concat(closehour)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+        "class": "profile-pic",
+        src: this.props.business.photoUrl
       }));
     }
   }]);

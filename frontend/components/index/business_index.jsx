@@ -11,8 +11,11 @@ class BusinessIndex extends React.Component {
              <div>
                  {this.props.businesses.map(business =>(
                                  <IndexItem 
-                                   business={business}
-                                    key={business.id}/>
+                                    business={business}
+                                    key={business.id}
+                                    price={business.price}
+                                    openhour={business.openhour}
+                                    closehour={business.closehour}/>
                                            ))}
              </div>
         )
