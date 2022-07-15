@@ -13,7 +13,7 @@ handleClick(){
 }
 
 render(){
-        const {name} = this.props.business;
+        const {name,price,openhour,closehour} = this.props.business;
         return(
             <div className='bench-index-item'
                onClick={this.handleClick}
@@ -26,7 +26,11 @@ render(){
                 </span>
                  <span className="index-item-category">Descriptions:</span>
                  </div>
-                   <img src='https://imagevars.gulfnews.com/2022/01/17/boba-tea-bubble-tea-stock_17e6738fd49_medium.jpg'/>
+                
+                  <div>{price}</div>
+                  <div>{`${openhour}-${closehour}`}</div>
+        
+                   <img class="profile-pic" src={this.props.business.photoUrl}/>
                </div>
              )
          }
