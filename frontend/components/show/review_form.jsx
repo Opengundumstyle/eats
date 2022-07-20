@@ -15,16 +15,18 @@ class ReviewForm extends React.Component{
   
   handleSubmit(e){
      e.preventDefault()
-     const businessId = parseInt(this.props.match.params.businessId);
-     const userId =  parseInt(this.props.match.params.userId);
-     const body = this.props.body
-     const rating = this.props.rating
-     const review = Object.assign({}, this.state, {
+     const businessId = this.props.businessId;
+     const userId =  this.props.userId;
+     const body = this.state.body
+     const rating = this.state.rating
+
+     const review = Object.assign({},{
       business_id: businessId,
       user_id:userId,
       body:body,
       rating:rating
      });
+  
      this.props.createReview(review);
      
      this.navigateToBusinessShow();
@@ -35,12 +37,13 @@ class ReviewForm extends React.Component{
  }
 
   navigateToBusinessShow() {
-   const url = `/businesses/${this.props.match.params.businesshId}`
+   const url = `/businesses/${this.props.match.params.businessId}`
    this.props.history.push(url);
  }
 
    
   render(){
+    console.log('props',this.props)
      return(
           <div className="review-form">
               <form onSubmit={this.handleSubmit}>

@@ -5,8 +5,6 @@ import {selectBusiness} from '../../reducers/selectors';
 
 const mapStateToProps = (state,{match}) =>{
      const businessId = parseInt(match.params.businessId);
-     
-     console.log('this is the sht',businessId)
      const business = selectBusiness(state.entities,businessId);
      const reviews = state.entities.reviews
      return {

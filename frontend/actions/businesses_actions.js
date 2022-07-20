@@ -4,6 +4,8 @@ export const RECEIVE_ALL_BUSINESSES = 'RECEIVE_ALL_BUSINESSES';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW'
 export const REFLESH_REVIEW = 'REFLESH_REVIEW'
+export const REMOVE_REVIEW = 'REMOVE_REVIEW';
+
 const receiveBusinesses = businesses =>({
      type: RECEIVE_ALL_BUSINESSES,
      businesses
@@ -16,15 +18,21 @@ const receiveBusiness = ({business,reviews}) =>({
      
 })
 
+const removeReview = reviewId => ({
+       type: REMOVE_POST,
+       reviewId
+     });
+
+
 
 export const refleshReview = () =>({
          type: REFLESH_REVIEW,
 })
 
 
-export const receiveReview = ({reviews,business_rating}) =>({
+export const receiveReview = ({review,business_rating}) =>({
        type: RECEIVE_REVIEW,
-       reviews,
+       review,
        business_rating
 })
 
@@ -33,6 +41,16 @@ export const createReview = review => dispatch => (
             review => (dispatch(receiveReview(review)))
        )
 )
+
+export const updateReview = review => dispatch => (
+       BusinessesAPIUtil.updateReview(review)
+         .then(review => dispatch(receiveReview(review)))
+     );
+     
+export const deleteReview = reviewId => dispatch => (
+       BusinessesAPIUtil.deleteReview(reviewId)
+         .then(() => dispatch(removeReview(reviewId)))
+     );
 
 export const getAll = () => dispatch =>{
        return BusinessesAPIUtil.getAllBusinesses()
