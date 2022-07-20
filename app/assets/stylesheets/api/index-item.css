@@ -1,0 +1,10 @@
+.businesses-index-item:hover {
+    box-shadow: 1px 4px 2px 1px rgba(5, 15, 130, .2);
+}
+
+.businesses-index-item {
+    padding:10px;
+    border-color: antiquewhite;
+    border: 1px solid lightgrey;
+    margin:10px;
+}

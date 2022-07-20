@@ -1,6 +1,6 @@
 
 .header-link {
-    color:rgb(232, 62, 62);
+    color:#e84e36;
     font-size: 40px;
 }
 
@@ -8,9 +8,62 @@
 a:link { text-decoration: none; }
 
 
-.login-signup{
-     position:absolute;
-     top:30px;
-     left:85%
+ .nav-bar{
+    list-style:none;
+   
+ }
+
+ .nav-bar li{
+    display: inline-block;
+    padding: 0px,20px;
+    
+ }
+
+.nav-bar li a{
+    transition:all 0.3 ease 0s;
+    color: rgb(238, 231, 231);
+    
 }
 
+.nav-bar li a:hover{
+    color:black
+}
+
+ul li{
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+ul li:first-child{
+    margin-left: 0;
+    }
+
+.session-title{
+     color:#e84e36;
+     padding:0;
+}
+
+.top-link{
+    font-weight: bold;
+    position: relative;
+    top:20%;
+    padding:0;
+}
+
+.foot-link{
+   position:absolute;
+   font-weight:normal;
+   opacity: 0.8;
+   font-size: 15px;
+   left:200px;
+ 
+}
+
+.link-title{
+    padding:0
+}
+
+
+.link{
+    color:rgb(56, 159, 211);
+}

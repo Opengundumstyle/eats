@@ -15,7 +15,7 @@ handleClick(){
 render(){
         const {name,price,openhour,closehour} = this.props.business;
         return(
-            <div className='bench-index-item'
+            <div className='businesses-index-item'
                onClick={this.handleClick}
                >
                  <h1>{name}</h1>
@@ -26,11 +26,10 @@ render(){
                 </span>
                  <span className="index-item-category">Descriptions:</span>
                  </div>
-                
                   <div>{price}</div>
                   <div>{`${openhour}-${closehour}`}</div>
         
-                   <img class="profile-pic" src={this.props.business.photoUrl}/>
+                   <img className="profile-pic" src={this.props.business.photoUrl}/>
                </div>
              )
          }

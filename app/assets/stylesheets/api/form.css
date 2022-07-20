@@ -1,5 +1,5 @@
 input[type=password],input[type=text], select {
-    width: 100%;
+    width: 300px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -9,8 +9,8 @@ input[type=password],input[type=text], select {
   }
   
   input[type=submit] {
-    width: 100%;
-    background-color: rgb(229, 72, 72);
+    width: 300px;
+    background-color:#e84e36;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -23,8 +23,7 @@ input[type=password],input[type=text], select {
     background-color: rgb(200, 42, 42);
   }
   
-  div {
-    border-radius: 5px;
+  /* div {
     background-color: #f2f2f2;
-    padding: 20px;
-  }
+    
+  } */
