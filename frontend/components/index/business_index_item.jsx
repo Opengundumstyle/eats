@@ -13,22 +13,23 @@ handleClick(){
 }
 
 render(){
-        const {name,price,openhour,closehour} = this.props.business;
+        const {business_rating,name,price,openhour,closehour,review} = this.props.business;
+     
         return(
             <div className='businesses-index-item'
                onClick={this.handleClick}
                >
                  <h1>{name}</h1>
                  <div className="index-item-info">
-                 <span className="index-item-category">Rating:</span>
+                 
                  <span className="index-item-copy">
-                           No rating yet
+                    {business_rating || 'No reviews yet'}
                 </span>
-                 <span className="index-item-category">Descriptions:</span>
+
                  </div>
                   <div>{price}</div>
                   <div>{`${openhour}-${closehour}`}</div>
-        
+                  <div>{review}</div>
                    <img className="profile-pic" src={this.props.business.photoUrl}/>
                </div>
              )

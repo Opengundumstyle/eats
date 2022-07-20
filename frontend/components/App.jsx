@@ -10,21 +10,19 @@ import business_index_container from "./index/business_index_container";
 
 const App = () => (
   <div>
-     <header>
-     <img className='logo' src={window.logoURL} alt="logo"/>
-    </header>
+     {/* <header>
+     <Link to="/" className="header-link"> <img className='logo' src={window.logoURL} alt="logo"/> </Link>
+    </header> */}
      <div>
       {/* <Link to="/" className="header-link"  >
        <h3>Eats</h3>
        </Link> */}
-         {/* <GreetingContainer/> */}
+         <GreetingContainer/>
        <Switch>
-       <Route exact path="/" component={business_index_container}/>
+        <Route exact path="/" component={business_index_container}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer}/>
         <Route path="/businesses/:businessId" component={business_show_container}/>
-       
-        
       </Switch>
       </div>
   </div>

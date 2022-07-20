@@ -18,7 +18,9 @@ class BusinessIndex extends React.Component {
                                     key={business.id}
                                     price={business.price}
                                     openhour={business.openhour}
-                                    closehour={business.closehour}/>
+                                    closehour={business.closehour}
+                                    rating = {business.rating}
+                                    review ={business.review}/>
                                            ))}
                                 
                </div>

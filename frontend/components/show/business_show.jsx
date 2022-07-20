@@ -22,15 +22,20 @@ class BusinessShow  extends React.Component{
   
     const reviews = Object.values(this.props.reviews)
     const business = this.props.business
-    const businessId = business.id
+    const businessId = this.props.businessId
+    console.log('business',business)
+    console.log('businessId',businessId)
     if (business === undefined) return null
         
     return (
         <div>
             <h1>{business.name}</h1>
             <Link to="/">Back to view more businesses</Link>
-           <Map/>
+          
           <BusinessDetail business={business} reviews={reviews}/>
+ 
+           {/* <div className='business-map'><Map/></div> */}
+
          <ReviewLink 
             className ="review-button"
              component={CreateFormContainer}
@@ -38,7 +43,7 @@ class BusinessShow  extends React.Component{
               label="Leave a Review" 
         /> 
             <ProtectedRoute
-             path="/businesses/:business/review"
+             path="/businesses/:businessId/review"
              component={CreateFormContainer}
             />
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 class SessionForm extends React.Component{
     
      constructor(props){
@@ -47,6 +47,11 @@ class SessionForm extends React.Component{
     
      render(){
          return (
+            <div>
+            <header>
+            <Link to="/" className="header-link"> <img className='logo' src={window.logoURL} alt="logo"/> </Link>
+           </header>
+            
              <div className="login-form-container">
                  <form onSubmit={this.handleSubmit} className="login-form-box">
                
@@ -95,6 +100,7 @@ class SessionForm extends React.Component{
                   :''}
                    
                    <div className='foot-link'>{this.props.navLink}</div>
+             </div>
              </div>
           )
        }
