@@ -7,13 +7,24 @@ export const getAllBusinesses = (businesses) => {
       })
   };
   
-  export const getBusiness = (id) => {
+export const getBusiness = (id) => {
          return $.ajax({
              url:`api/businesses/${id}`,
              method: 'GET'         
          })
   }
 
-
-
   
+export const createReview = review => (
+       $.ajax({
+           method:'POST',
+           url:'api/reviews',
+           data:{review}
+       })
+)
+
+
+
+
+
+

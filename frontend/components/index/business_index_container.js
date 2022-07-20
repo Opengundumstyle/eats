@@ -6,10 +6,7 @@ import { getAll} from '../../actions/businesses_actions';
 
 
 const mapStateToProps = state =>{
-
-      
       return{
-        //   businesses: asArray(state.entities)
           businesses: Object.values(state.entities.businesses)
       }
 }

@@ -4,9 +4,12 @@
     <title>Eats</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDyts6Ey3YEEU8-OdzPG5ADqP95tMzgz14&callback=initMap" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript">
+      window.logoURL="<%=image_url('Eats-logos.jpg')%>";
+    </script>
   </head>
 
   <body>

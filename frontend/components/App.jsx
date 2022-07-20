@@ -7,22 +7,26 @@ import {Route,Link,Switch} from 'react-router-dom';
 import {AuthRoute,ProtectedRoute} from '../util/route_util'
 import business_index_container from "./index/business_index_container";
 
+
 const App = () => (
   <div>
      <header>
-        <Link to="/" className="header-link"  >
-       <h1>Eats</h1>
-        </Link>
-         <GreetingContainer/>
+     <img className='logo' src={window.logoURL} alt="logo"/>
     </header>
-      <Switch>
-       
+     <div>
+      {/* <Link to="/" className="header-link"  >
+       <h3>Eats</h3>
+       </Link> */}
+         {/* <GreetingContainer/> */}
+       <Switch>
+       <Route exact path="/" component={business_index_container}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer}/>
         <Route path="/businesses/:businessId" component={business_show_container}/>
-        <ProtectedRoute exact path="/" component={business_index_container}/>
+       
         
       </Switch>
+      </div>
   </div>
 );
 
