@@ -1,4 +1,61 @@
-.business-map{
-    width: 50px;
-    height: 50px;
+
+.showcase-photos{
+    display:flex;
+    flex-direction: row;
 }
+
+.business-pic{
+  
+    height: 550px;
+    width: 740px;
+
+}
+
+.show-business-name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.show-business-name h1{
+    position: absolute;
+    top: 450px;
+    margin-left: 80px;
+}
+
+.back-to-home{
+    margin-left: 1100px;
+    
+}
+.back-to-home:hover{
+   text-decoration: underline;
+    
+}
+
+.write-review{
+    width:400px;
+    height:50px;
+}
+.write-review button{
+     width:180px;
+     height:50px;
+     background-color: #e84e36;
+     cursor: pointer;
+     border:1px solid lightgrey;
+     border-radius: 5px 5px 5px 5px;
+     margin-left:20px;
+}
+
+.submit-review{
+    font-family: 'Poppins', sans-serif;
+     font-size:16;
+     font-weight: bold;
+}
+
+.write-review button:hover{
+
+    background: rgb(184, 16, 16);
+   
+}
+

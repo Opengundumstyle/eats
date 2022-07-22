@@ -1,27 +1,43 @@
 import React from 'react';
 // import {Link} from 'react-router';
-import ReviewsIndex from './ReviewsIndex'
+import ReviewsIndexContainer from './ReviewsIndex_container'
+
+import { FaExternalLinkAlt,FaRegCommentDots,FaPhoneAlt,FaMapMarkedAlt} from "react-icons/fa";
 
 const BusinessDetail = ({business,reviews}) =>{
-    console.log(reviews)
+   
    return(
-      
+         
          <div className='business-show'>
-
-             <img className="business-pic" src={business.photoUrl}/>
              <div className='rating'>Rating:{business.business_rating || 'No reviews yet'}</div>
              <br />
                 <div className='business-info'>
-                    <div className='address'>Adress:{business.address}</div>
-                    <div className='website'>website:{business.website}</div>
-                    <div className='phone'>Phone:{business.phone}</div>
+               
+                    <div className='address'>Get direction:{business.address} <FaMapMarkedAlt size='1.7em'/></div>
+
+                    <hr />
+                           
+                    <div className='website'>{business.website} <FaExternalLinkAlt size='1.7em'/></div>
+
+                    <hr />
+                          
+                    <div className='phone'>{business.phone}< FaPhoneAlt size='1.7em'/></div>
+
+                    <hr />
+
+                    <div className='Business'>Message the Business <FaRegCommentDots size='1.7em'/></div>
+                        
                 </div>
+
+
              <div className='reviews'>
             
                 <h3>Recommended Reviews</h3>
                 {
                 reviews.map(review => {
-                    return (<ReviewsIndex key={review.id} review={review} />)
+                    return (<ReviewsIndexContainer key={review.id} review={review} />)
+                   
+
                 }
                     )}
              </div>

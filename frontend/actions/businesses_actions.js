@@ -19,7 +19,7 @@ const receiveBusiness = ({business,reviews}) =>({
 })
 
 const removeReview = reviewId => ({
-       type: REMOVE_POST,
+       type: REMOVE_REVIEW,
        reviewId
      });
 

@@ -14,7 +14,16 @@ class Business < ApplicationRecord
       has_one_attached :photo
        
       def business_rating
-            reviews.average(:rating)
+            average_review = reviews.average(:rating)
+      #       res = average_review - average_review.floor()  
+      #             if res > 0.5   
+      #                average_review = average_review.floor() + 0.5
+      #             else
+      #                   average_review = average_review.floor()
+      #             end
+      #      average_review
+
+      
       end
      
      

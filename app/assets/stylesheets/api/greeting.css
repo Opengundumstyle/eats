@@ -38,32 +38,73 @@ ul li:first-child{
     margin-left: 0;
     }
 
-.session-title{
+.session-title h2{
      color:#e84e36;
      padding:0;
+     margin-bottom:5px;
 }
 
 .top-link{
     font-weight: bold;
     position: relative;
-    top:20%;
+    top:15%;
     padding:0;
+    font-size: 14px;
 }
 
 .foot-link{
-   position:absolute;
+  
    font-weight:normal;
    opacity: 0.8;
-   font-size: 15px;
-   left:200px;
+   font-size: 12px;
+   margin-left:170px;
+   
  
 }
 
 .link-title{
-    padding:0
+    padding:0;
+   
 }
 
 
 .link{
     color:rgb(56, 159, 211);
+}
+
+.login-signup{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:2rem
+}
+
+.login-nav{
+  background-color: #e84e36;
+  cursor: pointer;
+  padding:10px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.login-nav:hover{
+    background-color: #b44332;
+}
+
+.logintext{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.signup-nav{
+    cursor: pointer;
+}
+
+.signup-nav:hover{
+  text-decoration: underline;
+    
 }

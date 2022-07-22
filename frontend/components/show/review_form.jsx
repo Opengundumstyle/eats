@@ -43,7 +43,7 @@ class ReviewForm extends React.Component{
 
    
   render(){
-    console.log('props',this.props)
+    
      return(
           <div className="review-form">
               <form onSubmit={this.handleSubmit}>
@@ -55,7 +55,8 @@ class ReviewForm extends React.Component{
                        type="number" 
                        value={this.state.rating}
                        onChange={this.update("rating")}/>
-                   
+
+                
                        <label>Comment</label>
                        <br />
                        <textarea cols="30"
