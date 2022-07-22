@@ -1,17 +1,22 @@
 import {connect} from 'react-redux'
 import ReviewsIndex from './ReviewsIndex'
+import { deleteReview } from '../../actions/businesses_actions'
 
-
-const mapStateToProps = ({review}) =>{
+const mapStateToProps = (state) =>{
 
    return{
-    review: review
-
+     currentUserId: state.session.id
    }
 }
 
+const mapDispatchToProps = (dispatch)=>{
+    return{
+       deleteReview: reviewId =>dispatch(deleteReview(reviewId))
+    }
+}
+
 export default connect(
-    mapStateToProps
+    mapStateToProps,mapDispatchToProps
 )(ReviewsIndex)
 
 

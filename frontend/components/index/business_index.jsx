@@ -1,6 +1,8 @@
 import React from 'react';
 import IndexItem from './business_index_item'
 import  Map from '../map/map';
+import  Navbar from '../nav/navbar'
+
 
 class BusinessIndex extends React.Component {
 
@@ -11,7 +13,9 @@ class BusinessIndex extends React.Component {
     render() {
         return (
             <div>
-                <div>
+                 < Navbar/>
+            <div className='businesses-index-page-box'>
+                 <div className='buinesses-index-page'>
                  {this.props.businesses.map(business =>(
                                  <IndexItem 
                                     business={business}
@@ -20,13 +24,17 @@ class BusinessIndex extends React.Component {
                                     openhour={business.openhour}
                                     closehour={business.closehour}
                                     rating = {business.rating}
-                                    review ={business.review}/>
+                                    review ={business.review}
+                                    website={business.website}/>
                                            ))}
                                 
-               </div>
+                  </div>
+                  <div className='businesses-map'>
                       <Map/>
-            
-             </div>
+                  </div>
+               </div>
+                    
+            </div>
         )
     }
   }

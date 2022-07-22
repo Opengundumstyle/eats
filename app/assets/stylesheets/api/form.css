@@ -26,3 +26,48 @@ input[type=password],input[type=text], select {
   /* div {
     background-color: #f2f2f2;
   } */
+
+  .login-form-box{
+    margin-left: 300px;
+    position: absolute;
+    top:300px;
+  }
+
+  .demo-login-box{
+    
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+  }
+
+  .demo-login-box:hover{
+     background-color: bisque;
+  }  
+
+  .session-submit{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .profile{
+      width:500px;
+      height:500px;
+      margin-left: 650px;
+      position: absolute;
+      top:250px;
+    
+     
+  }
+
+  body{
+    background-color: rgba(251,251,251,255);
+  }
+ 
+ 

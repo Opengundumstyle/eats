@@ -47,7 +47,7 @@ class SessionForm extends React.Component{
     
      render(){
          return (
-            <div>
+         <div className='auth-page'>
             <header>
             <Link to="/" className="header-link"> <img className='logo' src={window.logoURL} alt="logo"/> </Link>
            </header>
@@ -56,12 +56,20 @@ class SessionForm extends React.Component{
                  <form onSubmit={this.handleSubmit} className="login-form-box">
                
              <div className='session-title'>{this.props.title}</div>
-                { this.props.formType === 'login'? 
+          
+                { this.props.formType === 'Log In'? 
                  <div className='top-link'>{this.props.navLink}
                                              </div>: ''}
                         {this.renderErrors()}
+
                         <div className="login-form">
-                            <br/>
+                        { this.props.formType === 'Log In'?
+                        <div>
+                         <button onClick={e=>this.demoLogin(e)} className="demo-login-box">Demo User</button> 
+                         <br />
+                         <hr />
+                        </div>
+                  :''}
                           
                          <label>
                               <input type="text" 
@@ -81,7 +89,7 @@ class SessionForm extends React.Component{
                               />
                         </label>
                         <br />
-                         {this.props.formType === 'signup' ? 
+                         {this.props.formType === 'Sign Up' ? 
                              <label>
                              <input type="text" 
                                value={this.state.email}
@@ -93,15 +101,14 @@ class SessionForm extends React.Component{
                          }
                         <br />
                           <input className="session-submit" type="submit" value={this.props.formType} />
-                        </div>
+                          <div className='foot-link'>{this.props.navLink}</div>
+                     </div>
                  </form>
-                 { this.props.formType === 'login'?
-                  <button onClick={e=>this.demoLogin(e)} className="demo-login-box">Demo User</button> 
-                  :''}
-                   
-                   <div className='foot-link'>{this.props.navLink}</div>
-             </div>
-             </div>
+              </div>
+              <div>
+                  <img className='profile' src={window.profileURL} alt="profile"/> 
+               </div>
+         </div>
           )
        }
      }
