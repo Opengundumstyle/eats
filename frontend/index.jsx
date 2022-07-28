@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
  let store = configureStore()
   console.log(store.getState())
   
+  const root = document.getElementById("root");
+  
   if (window.currentUser) {
     const preloadedState = {
       entities: {
@@ -30,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
    window.store = store
 
-  const root = document.getElementById("root");
   ReactDOM.render(<Root store={store}/>, root);
   // ReactDOM.render(<h1>Heroku</h1>, root);
 
