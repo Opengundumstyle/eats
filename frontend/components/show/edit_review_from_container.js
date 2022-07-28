@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
-
+import { updateReview } from '../../util/businesses_api_util';
 
 const mapStateToProps = (state,ownProps) =>{
 
@@ -14,7 +14,7 @@ const mapStateToProps = (state,ownProps) =>{
 
 const mapDispatchToProps = dispatch =>({
 //   createReview: review => dispatch(createReview(review))
-     updateReview
+     updateReview: review => dispatch(updateReview(review))
      
 })
 

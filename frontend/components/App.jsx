@@ -20,7 +20,7 @@ const App = () => (
         <Route exact path="/" component={business_index_container}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer}/>
-        <Route path="/businesses/:businessId/review" component={createReview} ></Route>
+        <Route path="/businesses/:businessId/review" component={createReview} />
         <Route path="/businesses/:businessId" component={business_show_container}/>
         <Route path='/reviews/edit/:reviewId' component={EditReview}/>
       </Switch>
