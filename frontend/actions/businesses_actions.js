@@ -36,21 +36,35 @@ export const receiveReview = ({review,business_rating}) =>({
        business_rating
 })
 
+export const fetchReview = reviewId => dispatch =>(
+        BusinessesAPIUtil.fetchReview(reviewId)
+          .then(review =>dispatch(receiveReview(review)))
+)
+
 export const createReview = review => dispatch => (
        BusinessesAPIUtil.createReview(review).then(
             review => (dispatch(receiveReview(review)))
        )
 )
 
+
 export const updateReview = review => dispatch => (
        BusinessesAPIUtil.updateReview(review)
          .then(review => dispatch(receiveReview(review)))
      );
      
+// export const deleteReview = reviewId => dispatch => (
+//        BusinessesAPIUtil.deleteReview(reviewId)
+//          .then(() => dispatch(removeReview(reviewId)))
+//      );
+
 export const deleteReview = reviewId => dispatch => (
        BusinessesAPIUtil.deleteReview(reviewId)
          .then(() => dispatch(removeReview(reviewId)))
      );
+
+
+
 
 export const getAll = () => dispatch =>{
        return BusinessesAPIUtil.getAllBusinesses()

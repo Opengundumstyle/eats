@@ -46,18 +46,18 @@ class BusinessShow  extends React.Component{
 
             <div className='write-review'>
              <button className='submit-review'><ReviewLink 
-            className ="review-button"
-             component={CreateFormContainer}
-             to={`/businesses/${businessId}/review`} label="Write a review"
-        />  </button>
-            <ProtectedRoute
-             path="/businesses/:businessId/review"
-             component={CreateFormContainer}
-            />
-            
+                className ="review-button"
+                component={CreateFormContainer}
+                to={`/businesses/${businessId}/review`} label="Write a review"
+              />  </button>
+                <ProtectedRoute
+                path="/businesses/:businessId/review"
+                component={CreateFormContainer}
+                />
            </div>
+
            <div>
-            <BusinessDetail business={business} reviews={reviews}/>
+            <BusinessDetail businessId={businessId} business={business} reviews={reviews}/>
           </div>
  
            {/* <div className='business-map'><Map/></div> */}

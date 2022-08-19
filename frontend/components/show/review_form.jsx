@@ -3,18 +3,37 @@ import {withRouter} from 'react-router-dom'
 
 class ReviewForm extends React.Component{
    constructor(props){
-    
+      
      super(props);
      this.state =  {
       rating: 5,
-      body: ''
+      body: '',
      }
      this.handleSubmit = this.handleSubmit.bind(this)
      this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
    }
   
+   componentDidMount(){
+ 
+    // if(this.props.formType === 'edit review') {
+    //   const body =  this.props.location.state
+    //    this.setState({body:body})
+    //       }
+     
+     (this.props.formType === 'edit review')? 
+      this.props.fetchReview(this.props.reviewId)
+       .then(() => this.setState(
+            {body:this.props.review.body,
+            rating:this.props.review.rating})):null;
+      
+      // console.log('what props is this',this.props)
+      // console.log('what is the review like',this.props.review)
+  
+  } 
+
   handleSubmit(e){
      e.preventDefault()
+     
      const businessId = this.props.businessId;
      const userId =  this.props.userId;
      const body = this.state.body
@@ -26,10 +45,18 @@ class ReviewForm extends React.Component{
       body:body,
       rating:rating
      });
-  
-     this.props.createReview(review);
-     
-     this.navigateToBusinessShow();
+
+    // console.log('what is the review like',review)
+    
+    if (this.props.formType === 'create review') {
+          this.props.createReview(review)
+          this.navigateToBusinessShow();
+     }
+     else{
+         let newReview = Object.assign({},review,{id:this.props.match.params.reviewId})
+          this.props.updateReview(newReview)
+          this.navigateToBusinessShow();
+         };
   }
 
   update(property) {
@@ -37,13 +64,19 @@ class ReviewForm extends React.Component{
  }
 
   navigateToBusinessShow() {
-   const url = `/businesses/${this.props.match.params.businessId}`
-   this.props.history.push(url);
+    const url = `/businesses/${this.props.businessId}`
+    this.props.history.push(url);
+       
  }
 
    
   render(){
-    
+
+    console.log('what is the props here',this.props)
+    console.log('what is this businessid',this.props.businessId)
+    console.log('what is the state',this.state)
+    console.log('what is the review like',this.props.review)
+     
      return(
           <div className="review-form">
               <form onSubmit={this.handleSubmit}>
@@ -56,7 +89,7 @@ class ReviewForm extends React.Component{
                        value={this.state.rating}
                        onChange={this.update("rating")}/>
 
-                
+                   
                        <label>Comment</label>
                        <br />
                        <textarea cols="30"

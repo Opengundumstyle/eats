@@ -7,7 +7,8 @@ const mapStateToProps = (state,ownProps) =>{
 
       return {
          businessId: ownProps.match.params.businessId,
-         userId: state.session.id
+         userId: state.session.id,
+         formType: 'create review'
       }
 }
 

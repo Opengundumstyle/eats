@@ -11,6 +11,10 @@ class Review < ApplicationRecord
     foreign_key: :business_id,
     class_name: :Business
 
+    def reviewer
+          reviewer = user.username
+    end
+
     
     
 end

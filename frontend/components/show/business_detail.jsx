@@ -4,7 +4,7 @@ import ReviewsIndexContainer from './ReviewsIndex_container'
 
 import { FaExternalLinkAlt,FaRegCommentDots,FaPhoneAlt,FaMapMarkedAlt} from "react-icons/fa";
 
-const BusinessDetail = ({business,reviews}) =>{
+const BusinessDetail = ({businessId,business,reviews}) =>{
    
    return(
          
@@ -13,19 +13,19 @@ const BusinessDetail = ({business,reviews}) =>{
              <br />
                 <div className='business-info'>
                
-                    <div className='address'>Get direction:{business.address} <FaMapMarkedAlt size='1.7em'/></div>
+                    <div className='address'>Get direction:&nbsp;&nbsp;{business.address} <FaMapMarkedAlt size='1.3em'/></div>
 
                     <hr />
                            
-                    <div className='website'>{business.website} <FaExternalLinkAlt size='1.7em'/></div>
+                    <div className='website'><a href={business.website} target="_blank">{business.website}</a> &nbsp;&nbsp;&nbsp;&nbsp;<FaExternalLinkAlt size='1.3em'/></div>
 
                     <hr />
                           
-                    <div className='phone'>{business.phone}< FaPhoneAlt size='1.7em'/></div>
+                    <div className='phone'>{business.phone} &nbsp;&nbsp;&nbsp;&nbsp;< FaPhoneAlt size='1.3em'/></div>
 
                     <hr />
 
-                    <div className='Business'>Message the Business <FaRegCommentDots size='1.7em'/></div>
+                    <div className='Business'>Message the Business <FaRegCommentDots size='1.3em'/></div>
                         
                 </div>
 
@@ -35,7 +35,7 @@ const BusinessDetail = ({business,reviews}) =>{
                 <h3>Recommended Reviews</h3>
                 {
                 reviews.map(review => {
-                    return (<ReviewsIndexContainer key={review.id} review={review} />)
+                    return (<ReviewsIndexContainer businessId={businessId} key={review.id} review={review} />)
                    
 
                 }
