@@ -20,14 +20,41 @@ getRating(rating){
      if(rating - newRating >= 0.5) {
            newRating = newRating + 0.5
      }
-
      return newRating
+}
+
+reviewsNums(reviews){
+    let counts = 0;
+    for(let i = 0; i < reviews.length; i++){
+        counts += 1;
+    }
+    return counts===0?'':counts
+  }
+  
+
+getCategory(categories){
+    
+     let categoriesArr = Object.values(categories);
+    
+     let categoryList = [];
+    for(let category of categoriesArr){
+        categoryList.push(<div className='category-tag'>{category.category}</div>)
+    }
+       return categoryList
 
 }
 
 render(){
+
         const {business_rating,name,price,openhour,closehour,review,website} = this.props.business;
+        const index = this.props.index
         const rating = this.getRating(business_rating)
+        const categories = this.props.categories
+        let categoriesList = this.getCategory(categories)
+      
+    
+        
+
         let displayStar 
      
         switch (rating) {
@@ -56,7 +83,7 @@ render(){
                 displayStar = <div><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="gold"/><FaRegStarHalf color="gold"/></div>
                 break;
              case 5:
-                displayStar = <div><FaRegStar color="yellow"/><FaRegStar color="yellow"/><FaRegStar color="yellow"/><FaRegStar color="yellow"/><FaRegStar color="yellow"/></div>
+                displayStar = <div><FaRegStar color="gold"/><FaRegStar color="gold"/><FaRegStar color="gold"/><FaRegStar color="gold"/><FaRegStar color="gold"/></div>
                 break;
             default:
                 break;
@@ -74,26 +101,30 @@ render(){
 
                 <div className='index-info-div'>
                             <div className="index-item-info">
-                               <h1>{name}</h1>
+                               <h1>{`${index+1}. ${name}`}</h1>
                                 <span className="index-item-copy">
-                                    {business_rating ? displayStar : 'No reviews yet'}
+                                    {business_rating ? displayStar : ''}
                                 </span>
+                                <div className='categories-price'>
+                                  <div className='categories-index'>{categoriesList}</div>
                                   <div>{price}</div> 
-
+                                </div>
                                   <div className='hour-index'>
                                     <div> < FaRegClock color='green'/></div>
                                     <div>{`${openhour}-${closehour}`}</div>
                                   </div>
                                   <div className='review-index'>
                                     <div>< FaRegComment/></div>
-                                    <div className='index-reviews'>{review}</div>
+                                    <div className='index-reviews'>{review?review:'no reviews yet..'}</div>
                                   </div>
                             </div>
                             <br />
                           <hr />
+                           {
                             <div>
-                                <button className='index-website' src={website}>Website</button> 
+                                {website?<a href={website} target='_blank'><button className='index-website'>Website</button></a>:''}
                             </div>
+}
                 </div>
              </div>
              

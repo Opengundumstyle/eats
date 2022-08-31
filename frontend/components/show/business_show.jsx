@@ -6,6 +6,7 @@ import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/link_util';
 import  Map from '../map/map';
 import Navbar from '../nav/navbar';
+import {FaRegStarHalf,FaRegStar} from 'react-icons/fa'
 
 class BusinessShow  extends React.Component{
       
@@ -18,20 +19,70 @@ class BusinessShow  extends React.Component{
       this.props.refleshReview()
    }
 
- 
-   
+  getRating(rating){
+    let newRating  = Math.floor(rating)
+    if(rating - newRating >= 0.5) {
+          newRating = newRating + 0.5
+    }
+
+    return newRating
+
+  }
+
+  reviewsNums(reviews){
+    let counts = 0;
+    for(let i = 0; i < reviews.length; i++){
+        counts += 1;
+    }
+
+    return counts===0?'no reviews yet':counts
+  
+  }
+  
+  
   render(){
   
     const reviews = Object.values(this.props.reviews)
     const business = this.props.business
     const businessId = this.props.businessId
-  
-    console.log('business',business)
-    console.log('businessId',businessId)
+    const rating = this.getRating(business.business_rating)
+    let displayStar 
+     
+    switch (rating) {
+        case 1:
+          displayStar = <div> <FaRegStar color="yellow"/></div>
+            break;
+        case 1.5:
+            displayStar = <div><FaRegStar color="red"/><br /><FaRegStarHalf color="yellow"/></div>
+            break;
+        case 2:
+            displayStar = <div><FaRegStar color="red"/><FaRegStar  color="red"/></div>
+            break;
+        case 2.5: 
+             displayStar = <div><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStarHalf color="red"/></div>
+             break;
+        case 3:
+            displayStar = <div><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="red"/></div>
+            break;
+        case 3.5:
+            displayStar = <div><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStarHalf color="red"/></div>
+            break;
+         case 4:
+             displayStar = <div><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="gold"/></div>
+            break;   
+         case 4.5:
+            displayStar = <div><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="red"/><FaRegStar color="gold"/><FaRegStarHalf color="gold"/></div>
+            break;
+         case 5:
+            displayStar = <div><FaRegStar color="gold"/><FaRegStar color="gold"/><FaRegStar color="gold"/><FaRegStar color="gold"/><FaRegStar color="gold"/></div>
+            break;
+        default:
+            break;
+    }
+
     if (business === undefined) return null
         
     return (
-      
         <div>
             <Navbar/>
             <div className='show-business-name'>
@@ -41,7 +92,24 @@ class BusinessShow  extends React.Component{
               <div><img className="business-pic" src={business.photoUrl}/></div>
               <div><img className="business-pic" src={business.photoUrl}/></div>
            </div>
+           
+          <div className='showpage-info'>
+                  <div className='showpage-rating'>
+                      {displayStar} 
+                      <div className='rating-counts'>{`${this.reviewsNums(reviews)} reviews`} </div>
+                  </div>
+                  
+                  <div className='showpage-status-price-categories'>
+                      <div>claimed</div>
+                      <div>{business.price}</div>
+                      <div>categories</div>
+                  </div>
+                
+                  <div className='showpage-businesshour'>{`Open ${business.openhour} - ${business.closehour}`}</div>
+           </div>
+           
            <br />
+             
             <Link to="/" className="back-to-home">view more businesses</Link>
 
             <div className='write-review'>

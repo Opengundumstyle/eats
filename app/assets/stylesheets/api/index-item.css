@@ -55,8 +55,33 @@
 .hour-index{
     display: flex;
     flex-direction: row;
+    gap:0.3rem;
 }
 .review-index{
     display: flex;
     flex-direction: row;
+    gap:0.3rem;
+}
+
+.categories-index{
+     display: flex;
+     flex-direction: row;
+     gap: 0.5rem;
+}
+
+.category-tag{
+    background-color: rgb(235, 230, 230);
+    padding: 3px;
+    border-radius: 10px 10px 10px 10px;
+    color: #6E7072;
+    font-weight: bold;
+}
+
+.categories-price{
+     display: flex;
+     align-items: center;
+     gap:0.4rem;
+     font-size: 14px;
+     color: #6E7072;
+    
 }

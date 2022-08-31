@@ -1,6 +1,8 @@
 class Business < ApplicationRecord
       validates :name, :address, presence:true, uniqueness:true
       validates :openhour,:closehour, presence:true
+
+      has_many :tags
       
       has_many :categories,
       through: :tags,
@@ -15,17 +17,19 @@ class Business < ApplicationRecord
        
       def business_rating
             average_review = reviews.average(:rating)
-      #       res = average_review - average_review.floor()  
-      #             if res > 0.5   
-      #                average_review = average_review.floor() + 0.5
-      #             else
-      #                   average_review = average_review.floor()
-      #             end
-      #      average_review
-
-      
       end
+
+     def categoriesItem
+            categoriesHash =  {}
+            if categories 
+                  categories.each do |category|
+                        key = category.category
+                        categoriesHash[key] = category
+                  end
+            end
+
+         categoriesHash
+     end
+
      
-     
-   
 end

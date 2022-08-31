@@ -59,3 +59,22 @@
    
 }
 
+.showpage-info{
+    position: absolute;
+    top: 570px;;
+    left:85px;
+    z-index: 5;
+    font-weight: bold;
+}
+
+.showpage-status-price-categories{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.showpage-rating{
+    display: flex;
+    
+}
+

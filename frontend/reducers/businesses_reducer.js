@@ -1,8 +1,7 @@
 import{
     RECEIVE_ALL_BUSINESSES ,
     RECEIVE_BUSINESS,
-    RECEIVE_REVIEW,
-    
+    RECEIVE_REVIEW,   
 } from '../actions/businesses_actions'
 
 export default (oldstate ={},action)=>{
@@ -12,8 +11,6 @@ export default (oldstate ={},action)=>{
         case RECEIVE_ALL_BUSINESSES:
             return action.businesses
         case RECEIVE_BUSINESS:
-        
-            // return Object.assign({},oldstate,{[action.business.id]:action.business})
              newState[action.business.id] = action.business
              return newState
       

@@ -1,8 +1,10 @@
 import React from 'react'
 import Greeting from '../greeting/greeting_container'
+import Search from '../search_bar/search_bar'
 import {IoChatbubbleEllipsesOutline} from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { FiBell } from "react-icons/fi";
+
 
 
 
@@ -12,12 +14,13 @@ render(){
    return (
           <div className="nav">
             <div> <Link to='/' className='log-box'><img className='nav-logo' src={window.logoURL} alt="logo"/></Link></div>
-                <div className="search-container">
+                {/* <div className="search-container">
                       <form  className='search'action="/action_page.php">
                       <input type="text" placeholder="Search.." name="search"/>
-                      {/* <button type="submit" className='searchLogo'><FaSearch size='1.7em'/></button> */}
+                      <button type="submit" className='searchLogo'><FaSearch size='1.7em'/></button>
                       </form>
-                </div>
+                </div> */}
+                    <Search/>
                 
                 <div className='filler-links'>
                    

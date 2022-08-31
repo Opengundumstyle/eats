@@ -11,7 +11,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch)=>{
     return{
-       deleteReview: review =>dispatch(deleteReview(review))
+       deleteReview: reviewId =>dispatch(deleteReview(reviewId))
       
     }
 }

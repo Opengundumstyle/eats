@@ -46,6 +46,28 @@ Review.create(user_id:user2.id,business_id:b2.id,rating:5,body:'Best boba in all
 
 Review.create(user_id:user3.id,business_id:b2.id,rating:4,body:'So happy they opened up a store in Berkeley! I love their classic milk tea and this location is much closer (for me) than the Cupertino one. Although this place is almost always packed, you can order through Snackpass (either through in-store or mobile app and itll be ready for pick up in less than 10 min!')
 
+friedfoodCategory = Category.create(category:"Fried Food")
+chickenshopCategory= Category.create(category:"Chicken Shop")
+coffeeCategory = Category.create(category:"Coffee & Tea")
+bubbleteaCategory= Category.create(category:"Bubble Tea")
+massageCategory=Category.create(category:"Massage")
+ramenCategory=Category.create(category:"Ramen")
+noodlesCategory=Category.create(category:"Noodles")
+
+Tag.create({:category_id => friedfoodCategory.id,:business_id => b1.id})
+Tag.create({:category_id =>chickenshopCategory.id,:business_id =>b1.id})
+Tag.create({:category_id=>coffeeCategory.id,:business_id=> b2.id})
+Tag.create({:category_id=>bubbleteaCategory.id,:business_id=> b2.id})
+Tag.create({:category_id=>massageCategory.id,:business_id=> b3.id})
+Tag.create({:category_id =>ramenCategory.id,:business_id=> b4.id})
+Tag.create({:category_id =>noodlesCategory.id,:business_id=>b4.id})
+
+
+
+
+
+
+
 
 
 

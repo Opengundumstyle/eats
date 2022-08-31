@@ -44,6 +44,11 @@ export const fetchReview = reviewId =>(
     })
 )
 
+export const fetchReviews =()=>(
+   $.ajax({
+       url:`/api/reviews/`
+   })
+)
 
 
 

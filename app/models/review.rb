@@ -14,7 +14,5 @@ class Review < ApplicationRecord
     def reviewer
           reviewer = user.username
     end
-
-    
     
 end

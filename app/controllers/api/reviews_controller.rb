@@ -1,5 +1,10 @@
 class Api::ReviewsController < ApplicationController
     # before_action :require_logged_in
+
+    def index 
+          @reviews = Review.all
+          render :index
+    end
     
     def show
         @review = Review.find(params[:id])
@@ -9,7 +14,6 @@ class Api::ReviewsController < ApplicationController
         @review = current_user.reviews.new(review_params)
         
         if @review.save
-         
             render :show
         else
             render json: @review.errors.full_messages, status: :unprocessable_entity
@@ -18,7 +22,6 @@ class Api::ReviewsController < ApplicationController
   
     def update
          @review = Review.find(params[:id])
-
          if @review.update(review_params)
            render :show
          else
