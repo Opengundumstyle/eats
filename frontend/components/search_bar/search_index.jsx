@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from '../nav/navbar.jsx'
+import Nav from '../nav/navbar_container'
 import IndexItem from "../index/business_index_item";
 import  Map from '../map/map';
 

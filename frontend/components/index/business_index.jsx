@@ -1,7 +1,7 @@
 import React from 'react';
 import IndexItem from './business_index_item'
 import  Map from '../map/map';
-import  Navbar from '../nav/navbar'
+import  Navbar from '../nav/navbar_container'
 
 
 class BusinessIndex extends React.Component {

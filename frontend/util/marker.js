@@ -81,9 +81,9 @@ class Marker {
               //   alert('your gay: ' + status);
               // }
            })
-  
            return position
        }
+       
 
   }
   

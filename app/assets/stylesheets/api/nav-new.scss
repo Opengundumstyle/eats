@@ -1,0 +1,228 @@
+
+/* .search-container{
+    position: fixed;
+    margin-left: 150px;
+} */
+
+.nav-logo{
+    height:100px;
+    margin-left: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(3, 6, 41, 0.2);
+}
+
+*{
+    box-sizing:border-box;
+}
+
+  a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+
+body{
+    margin:0;
+    font-size: 14px;;
+   
+}
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 1rem;
+    border-bottom:1px solid lightgray;
+    padding: 14px 17px;
+     .search-bar {
+        border: 1px solid #D1D0D4;
+        box-shadow: 0 0 3px 1px #e6e6e6;
+         button {
+            background-color: rgb(227, 17, 17);
+        }
+    }
+}
+
+.filler-links{
+     padding:0;
+     margin:0;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     gap:1rem;
+     font-size: 16px;;
+}
+
+
+.filler-links > *{
+    background-color: white;
+}
+
+
+  
+   #filler2:hover{
+    background-color: rgb(228, 222, 222);
+    transition: all ease 0.5s;
+    padding:5px;
+    border-radius: 5px 5px 5px 5px;
+ 
+    
+}
+
+   #filler1:hover{
+    background-color:  rgb(228, 222, 222);
+    transition: all ease 0.5s;
+    padding:5px;
+    border-radius: 5px 5px 5px 5px;
+   
+}
+    #filler3:hover {
+        background-color:  rgb(228, 222, 222);
+        transition: all ease 0.5s;
+        padding:5px;
+        border-radius:50%;
+    }
+
+
+    #filler4:hover {
+        background-color:  rgb(228, 222, 222);
+        transition: all ease 0.5s;
+        padding:5px;
+        border-radius:50%;
+
+    }
+
+    .inner-filler{
+         display: flex;
+         flex-direction: row;
+         gap: 0.3rem;
+    }
+
+   .searchLogo {
+       position:relative;
+       top:50px;
+       background-color:#e84e36;
+    }
+ 
+
+      .dropbtn {
+        background: #ffffff;
+        border-radius: 90px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 4px 6px;
+        padding-left:10px;   
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        border: none;
+        vertical-align: middle;
+        transition: box-shadow 0.4s ease;
+      }
+
+      .greeting-text{
+          font-size:14px;
+          position: absolute;
+          right: 55px;
+          z-index: 4;
+          width:50px;
+          top:80px;
+          display: none;
+          padding:10px ;
+          font-weight: bolder;
+      }
+
+        .dropbtn:hover .greeting-text{
+            display: block;
+        }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: lightgrey} 
+
+      #filler1{
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      #filler2{
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      #filler3{
+        padding: 5px;
+        cursor: pointer;
+        
+      }
+
+      #filler4{
+        padding: 5px;
+        cursor: pointer;
+        
+      }
+   
+      .filler3-text{
+          display: none;
+          padding:0;
+      }
+
+      .filler4-text{
+        display: none;
+        padding:0;
+        margin-top: 60px;
+        font-size: 14px;
+        right: 110px;
+        z-index: 4;
+        position: absolute;
+        background-color: lightgrey;
+        
+    }
+
+    .filler3-hover{
+        display:none ;
+        font-size: 14px;
+        position: absolute;
+        right: 140px;
+        z-index: 4;
+        width:50px;
+        font-weight: bold;
+    }
+
+    .filler4-hover{
+        display:none ;
+        font-size: 14px;
+        position: absolute;
+        right: 105px;
+        z-index: 4;
+        width:50px;
+        font-weight: bold;
+    }
+    
+    .filler3-div:hover .filler3-hover{
+        display: block;
+        transition: all ease 2s;
+        z-index:4;
+    }
+
+    .filler4-div:hover .filler4-hover{
+        display: block;
+        transition: all ease 2s;
+        z-index:4;
+    }
+
+    .filler-greeting{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       gap:1rem;
+    }
+
+    

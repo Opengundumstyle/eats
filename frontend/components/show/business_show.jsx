@@ -5,7 +5,7 @@ import React from 'react';
 import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/link_util';
 import  Map from '../map/map';
-import Navbar from '../nav/navbar';
+import Navbar from '../nav/navbar_container';
 import {FaRegStarHalf,FaRegStar} from 'react-icons/fa'
 
 class BusinessShow  extends React.Component{
