@@ -101,7 +101,9 @@ class BusinessShow  extends React.Component{
                   
                   <div className='showpage-status-price-categories'>
                       <div>claimed</div>
+                      <div className='show-dot'>•</div>
                       <div>{business.price}</div>
+                      <div className='show-dot'>•</div>
                       <div>categories</div>
                   </div>
                 

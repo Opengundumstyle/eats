@@ -87,20 +87,25 @@ ul li:first-child{
 
 .signuptext{
     font-family: 'Poppins', sans-serif;
-    color:white;
+    // color:rgba(255, 255, 255, 0.8);
     font-weight: 500;
     font-size: 16px;
 }
 
 .signup-nav{
     cursor: pointer;
-    background-color:#e84e36;
+    // color:rgba(255, 255, 255,0.3);
+    color:rgba(255, 255, 255, 0.95);
+    background:rgb(232, 77, 54);
     padding:10px;
     border-radius: 5px 5px 5px 5px;
     border: none;
 }
+
 .signup-nav:hover{
-    background-color:#e96f5d ;
+    color:rgba(255, 255, 255, 1.2);
+    background:rgb(234, 88, 65);
+    box-shadow: 0 5px 15px rgba(232, 77, 54, 0.4);
 }
 
 .menu{
@@ -117,7 +122,7 @@ ul li:first-child{
     transform: translateY(-20px);
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
     z-index:8;
-}
+ }
 
 .menu.active {
     opacity: 1;

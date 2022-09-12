@@ -1,0 +1,175 @@
+
+.showcase-photos{
+    display:flex;
+    flex-direction: row;
+}
+
+.business-pic{
+  
+    height: 550px;
+    width: 740px;
+
+}
+
+.show-business-name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.show-business-name h1{
+    position: absolute;
+    top: 450px;
+    margin-left: 80px;
+}
+
+.back-to-home{
+    margin-left: 1100px;
+    
+}
+.back-to-home:hover{
+   text-decoration: underline;
+    
+}
+
+.write-review{
+    width:400px;
+    height:50px;
+}
+.write-review button{
+     width:180px;
+     height:50px;
+     background-color: #e84e36;
+     cursor: pointer;
+     border:1px solid lightgrey;
+     border-radius: 5px 5px 5px 5px;
+     margin-left:20px;
+}
+
+.submit-review{
+    font-family: 'Poppins', sans-serif;
+     font-size:16;
+     font-weight: bold;
+}
+
+.write-review button:hover{
+
+    background: rgb(184, 16, 16);
+   
+}
+
+.showpage-info{
+    position: absolute;
+    top: 570px;;
+    left:85px;
+    z-index: 5;
+    font-weight: bold;
+}
+
+.showpage-status-price-categories{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.showpage-rating{
+    display: flex;
+    
+}
+
+.show-dot{
+    font-size:30px;
+}
+
+.business-info{
+   position:absolute;
+   width:330px;
+   right:8%;
+   border: 1px solid lightgray;
+   border-radius: 3px;
+   font-size: 15px;
+   font-weight: 500;
+   padding:20px;
+   margin-top:37px;
+   z-index:1;
+
+    .website{
+        padding-bottom: 10px;
+        font-weight: 600;
+        .show-info-link{
+            float:left;
+            color:rgba(2,122,151,1);
+         
+        }
+        .show-info-icon{
+            float:right;
+            color:black;
+        }
+    }
+    .show-info-link:hover{
+         text-decoration: underline;
+    }
+
+
+    .phone{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-weight: 600;
+        .number{
+            float:left;
+            font-size: medium;
+         
+        }
+        .phone-icon{
+            float:right;
+        }
+    }
+
+    .address{
+        padding-bottom: 10px;
+        font-weight: 600;
+        display:flex;
+        flex-direction: column;
+        gap:5px;
+
+     .show-info-icon{
+         color:black
+     }
+     #direction-info{
+        //  font-weight:1200;
+         color:rgba(2,122,151,1);
+     }
+
+     .show-address-link{
+         color:gray;
+     }
+
+     .link-address-icon{
+        display: flex;
+        flex-direction: row;
+        gap:4em;
+            .show-address-link{
+                width:200px;
+                height:20px;
+            }
+        }
+        #direction-info:hover{
+            text-decoration: underline;
+        }
+      
+     }
+
+     .Business{
+        padding-top: 10px;
+        .message-business-icon{
+             float:right;
+        }
+     }
+}
+
+.reviews{
+    width: 700px;
+    height:auto;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { IoPersonCircleSharp } from "react-icons/io5";
 
 const ReviewIndex = (props) =>{
       const review = props.review
@@ -27,7 +28,11 @@ const ReviewIndex = (props) =>{
            <div className='review'>
                
                   <div>
-                    <div>{reviewer}</div>
+                    <div className='name-icon-show'>
+                         <IoPersonCircleSharp size='4em' color='gray'/>
+                         <div>{reviewer}</div>
+                    </div>
+
                     <div> Rating:{rating} </div>
                     <div>{body}</div>
                      {review.user_id === currentUserId ? displayEditDelete() : null }

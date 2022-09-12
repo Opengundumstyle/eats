@@ -14,7 +14,7 @@ const Greeting = ({currentUser, logout}) =>{
 
             <Link to='/login' className='log-in-link-text'><button className='login-nav'><div className='logintext'>Log&nbsp;In</div></button></Link>
 
-            <Link to="/signup"><button className='signup-nav'><div className='signuptext'>Sign&nbsp;Up</div></button></Link>
+            <Link to="/signup"><button className='signup-nav singupglow'><div className='signuptext'>Sign&nbsp;Up</div></button></Link>
 
         </nav>
    )
@@ -27,7 +27,7 @@ const Greeting = ({currentUser, logout}) =>{
       </button>
           <div ref={dropdownRef} className={`menu ${inActive ? 'active' : 'inactive'}`}>
                 <Link to="/">
-                <div className="header-button" onClick={logout}>Log&nbsp;Out&nbsp;</div>
+                  <div className="header-button" onClick={logout}>Log&nbsp;Out&nbsp;</div>
                 </Link>
        </div>
     </div>
