@@ -35,7 +35,6 @@ class BusinessIndex extends React.Component {
                     </div>
                   <div className='businesses-map'>
                       <Map businesses={this.props.businesses}/>
-                      {/* <Map/> */}
                   </div>
                </div>
                     

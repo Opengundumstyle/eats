@@ -4,9 +4,10 @@ import  CreateFormContainer from'./create_review_form_container'
 import React from 'react';
 import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/link_util';
-import  Map from '../map/map';
 import Navbar from '../nav/navbar_container';
 import {FaRegStarHalf,FaRegStar} from 'react-icons/fa'
+import {IoMdStarOutline} from "react-icons/io";
+import { MdOutlineCheckCircleOutline } from "react-icons/md";
 
 class BusinessShow  extends React.Component{
       
@@ -96,44 +97,48 @@ class BusinessShow  extends React.Component{
           <div className='showpage-info'>
                   <div className='showpage-rating'>
                       {displayStar} 
-                      <div className='rating-counts'>{`${this.reviewsNums(reviews)} reviews`} </div>
+                      <div className='rating-counts'>{`${this.reviewsNums(reviews)}`}&nbsp;reviews </div>
                   </div>
                   
                   <div className='showpage-status-price-categories'>
-                      <div>claimed</div>
+                     <div className='claim-div'>
+                      <div><MdOutlineCheckCircleOutline color='rgba(88,180,255,1)'/></div>
+                      <div className='claimtag'>Claimed</div>
+                    </div>
+                          
                       <div className='show-dot'>•</div>
                       <div>{business.price}</div>
                       <div className='show-dot'>•</div>
                       <div>categories</div>
                   </div>
                 
-                  <div className='showpage-businesshour'>{`Open ${business.openhour} - ${business.closehour}`}</div>
+                  <div className='showpage-businesshour'>
+                       <div className='open-tag'>Open</div> 
+                       <div>{`${business.openhour} - ${business.closehour}`}</div>
+                </div>
            </div>
            
            <br />
              
             <Link to="/" className="back-to-home">view more businesses</Link>
-
+            
             <div className='write-review'>
-             <button className='submit-review'><ReviewLink 
-                className ="review-button"
+             <button className='submit-review'>
+              <div><IoMdStarOutline color='white' size='2.5em' /></div> 
+              <div> <ReviewLink 
                 component={CreateFormContainer}
-                to={`/businesses/${businessId}/review`} label="Write a review"
-              />  </button>
+                to={`/businesses/${businessId}/review`} label="Write a review" 
+              /> </div>  </button>
                 <ProtectedRoute
                 path="/businesses/:businessId/review"
                 component={CreateFormContainer}
                 />
+                   <hr />
            </div>
-
            <div>
             <BusinessDetail businessId={businessId} business={business} reviews={reviews}/>
           </div>
  
-           {/* <div className='business-map'><Map/></div> */}
-           {/* <div className='show-map'>
-             <Map/>
-           </div> */}
         
         </div>
     )

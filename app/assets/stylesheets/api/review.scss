@@ -1,0 +1,62 @@
+.name-icon-show{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+
+.name-rating-body{
+    display:flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.reviwer-name{
+    font-weight: 900;
+    font-size: 16px;
+    font-family: 'Open Sans';
+}
+
+.review{
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+.review-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1.2px solid lightgray;
+    .log-box{
+     
+        margin-left: 5%;
+    }
+    
+    .nav-greeting{
+        margin-right: 5%;
+    }
+}
+
+.review-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.review-form-title{
+    font-size:18px;
+}
+textarea{
+    width:800px;
+    height: 400px;
+    resize: none;
+}
+
+input[type="radio"] {
+    display: none;
+    &:checked ~ label, &:hover ~ label {
+      background-color: gray;
+    }
+  }

@@ -36,26 +36,37 @@
 .write-review{
     width:400px;
     height:50px;
+    margin-left:5%;
 }
 .write-review button{
      width:180px;
      height:50px;
-     background-color: #e84e36;
+     background: rgb(184, 16, 16);
      cursor: pointer;
-     border:1px solid lightgrey;
+     border:none;
      border-radius: 5px 5px 5px 5px;
      margin-left:20px;
 }
 
 .submit-review{
+    display:flex;
+    flex-direction: row;
+    gap:0.5rem;
+    align-items: center;
+   
+}
+
+
+
+.review-button{
+    font-weight: bolder;
+    font-size: 17px;
+    color:white;
     font-family: 'Poppins', sans-serif;
-     font-size:16;
-     font-weight: bold;
 }
 
 .write-review button:hover{
-
-    background: rgb(184, 16, 16);
+    background-color: #e84e36;
    
 }
 
@@ -65,6 +76,7 @@
     left:85px;
     z-index: 5;
     font-weight: bold;
+    color:white
 }
 
 .showpage-status-price-categories{
@@ -72,10 +84,33 @@
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+    font-size: 18px;
+    .claim-div{
+         display: flex;
+         flex-direction: row;
+         text-align: center;
+         gap:3px;
+        .claimtag{
+            color:rgba(88,180,255,1);
+        }
+    }
 }
 
 .showpage-rating{
     display: flex;
+    font-size: 17px;
+    gap:0.5rem;
+    
+}
+
+.showpage-businesshour{
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+        .open-tag{
+            color: rgba(4,197,133,1);
+        }
     
 }
 
@@ -169,7 +204,12 @@
      }
 }
 
+
 .reviews{
     width: 700px;
     height:auto;
+    margin-left: 5%;
 }
+
+
+

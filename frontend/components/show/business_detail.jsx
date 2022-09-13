@@ -1,7 +1,8 @@
 import React from 'react';
 // import {Link} from 'react-router';
 import ReviewsIndexContainer from './ReviewsIndex_container'
-import { FaExternalLinkAlt,FaRegCommentDots,FaPhoneAlt,FaMapMarkedAlt} from "react-icons/fa";
+import { FaExternalLinkAlt,FaRegCommentDots,FaMapMarkedAlt} from "react-icons/fa";
+import { FiPhoneCall } from "react-icons/fi";
 
 
 const BusinessDetail = ({businessId,business,reviews}) =>{
@@ -22,7 +23,7 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
 
                     <hr />
                           
-                    <div className='phone'><div className='number'>{business.phone}</div>&nbsp;&nbsp;&nbsp;&nbsp;< FaPhoneAlt size='1.5em' className='phone-icon'/></div>
+                    <div className='phone'><div className='number'>{business.phone}</div>&nbsp;&nbsp;&nbsp;&nbsp;< FiPhoneCall size='1.5em' className='phone-icon'/></div>
 
                     <hr />
 
@@ -44,7 +45,7 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
 
              <div className='reviews'>
             
-                <h3>Recommended Reviews</h3>
+                <h2>Recommended Reviews</h2>
                 {
                   reviews.map(review => {
                      return (<ReviewsIndexContainer businessId={businessId} key={review.id} review={review} />)

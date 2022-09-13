@@ -1,13 +1,14 @@
 
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
-import { updateReview, fetchReview } from '../../actions/businesses_actions';
+import { updateReview, fetchReview,getOne } from '../../actions/businesses_actions';
 
 
 const mapStateToProps = (state,ownProps) =>{
   
     return {
        businessId: ownProps.match.params.businessId,
+       business: state.entities.businesses[ownProps.match.params.businessId],
        userId: state.session.id,
        formType: 'edit review', 
        reviewId:parseInt(ownProps.match.params.reviewId),
@@ -18,8 +19,8 @@ const mapStateToProps = (state,ownProps) =>{
 
 const mapDispatchToProps = dispatch =>({
      updateReview: review => dispatch(updateReview(review)),
-     fetchReview: reviewId => dispatch(fetchReview(reviewId))
-     
+     fetchReview: reviewId => dispatch(fetchReview(reviewId)),
+     fetchBusiness: businessId=>dispatch(getOne(businessId))
 })
 
 export default connect(
