@@ -13,7 +13,7 @@ const mapStateToProps = (state,ownProps) =>{
        formType: 'edit review', 
        reviewId:parseInt(ownProps.match.params.reviewId),
        review: (Object.values(state.entities.reviews))[0],
-      //  review:state.entities.reviews.reviewId
+     
     }
 }
 
