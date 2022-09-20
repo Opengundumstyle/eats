@@ -25,3 +25,4 @@ npm-debug.log
 public/assets/*
 # Ignore application configuration
 /config/application.yml
+frontend/components/show/business_detail.jsx

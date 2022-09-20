@@ -11,9 +11,7 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
   let encodedAddress = encodeURIComponent(address);
   console.log('show me the address',encodedAddress)
   console.log('what is the fking business',business)
-
    return(
-        
          <div className='business-show'>
              
              <br />
@@ -35,10 +33,7 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
                            <div><a href={`https://maps.google.com/?q=${encodedAddress}`} target="_blank"><FaMapMarkedAlt size='1.7em' className='show-info-icon' /></a></div>
                         </div>
                     </div>
-                     
                      <hr/>
-                 
-
                     <div className='Business'>Message the Business <FaRegCommentDots size='1.5em' className='message-business-icon' /></div>
                         
                 </div>
