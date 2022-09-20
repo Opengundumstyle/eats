@@ -10,7 +10,7 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
   let address = business.address;
   let encodedAddress = encodeURIComponent(address);
   console.log('show me the address',encodedAddress)
-  console.log('what is the fking business',business)
+  
    return(
          <div className='business-show'>
              
