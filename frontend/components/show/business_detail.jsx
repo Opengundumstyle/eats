@@ -17,7 +17,7 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
              <br />
                 <div className='business-info'>
                            
-                    <div className='website'><a class='show-info-link' href={business.website} target="_blank">{business.website}</a> &nbsp;&nbsp;&nbsp;&nbsp;<a className='show-info-icon' href={business.website} target="_blank"><FaExternalLinkAlt className='info-icon' size='1.5em' /></a></div>
+                    <div className='website'><a className='show-info-link' href={business.website} target="_blank">{business.website}</a> &nbsp;&nbsp;&nbsp;&nbsp;<a className='show-info-icon' href={business.website} target="_blank"><FaExternalLinkAlt className='info-icon' size='1.5em' /></a></div>
 
                     <hr />
                           
@@ -48,10 +48,10 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
                      <div><iframe
                            width="315"
                            height="150"
-                           frameborder="0" style={{border:0}}
-                           referrerpolicy="no-referrer-when-downgrade"
+                           frameBorder="0" style={{border:0}}
+                           referrerPolicy="no-referrer-when-downgrade"
                            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDyts6Ey3YEEU8-OdzPG5ADqP95tMzgz14&q=${encodedAddress}`}
-                           allowfullscreen>
+                           allowFullScreen>
                            </iframe>
                      </div>
 
