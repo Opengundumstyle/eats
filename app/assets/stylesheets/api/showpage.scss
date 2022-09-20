@@ -2,26 +2,53 @@
 .showcase-photos{
     display:flex;
     flex-direction: row;
+    // filter: blur(3px);
 }
+
+
 
 .business-pic{
-  
     height: 550px;
     width: 740px;
-
+    object-fit: cover;
 }
+
+.business-pic2{
+    height: 230px;
+    width: 744px;
+    object-fit: cover;
+    top: 453px;
+    left:0;
+    position: absolute;
+    filter: blur(3px) brightness(50%);
+   
+}
+.business-pic3{
+    height: 230px;
+    width: 740px;
+    object-fit: cover;
+    top: 453px;
+    left:740px;
+    position: absolute;
+    filter: blur(3px) brightness(50%);
+   
+}
+
+
 
 .show-business-name{
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     color: white;
     font-weight: bold;
+    
 }
 
 .show-business-name h1{
     position: absolute;
     top: 450px;
     margin-left: 80px;
+    z-index: 99;
 }
 
 .back-to-home{
@@ -36,7 +63,7 @@
 .write-review{
     width:400px;
     height:50px;
-    margin-left:5%;
+    margin-left:8.5%;
 }
 .write-review button{
      width:180px;
@@ -82,9 +109,11 @@
 .showpage-status-price-categories{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     font-size: 18px;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 600;
     .claim-div{
          display: flex;
          flex-direction: row;
@@ -94,12 +123,18 @@
             color:rgba(88,180,255,1);
         }
     }
+    .categoryStr{
+        font-weight: bolder;
+    }
 }
 
 .showpage-rating{
     display: flex;
     font-size: 17px;
     gap:0.5rem;
+    .no-review-tag{
+        color: rgb(236, 176, 64);
+    }
     
 }
 
@@ -115,13 +150,13 @@
 }
 
 .show-dot{
-    font-size:30px;
+    font-size:20px;
 }
 
 .business-info{
    position:absolute;
-   width:330px;
-   right:8%;
+   width:365.34px;
+   right:10%;
    border: 1px solid lightgray;
    border-radius: 3px;
    font-size: 15px;
@@ -136,6 +171,7 @@
         .show-info-link{
             float:left;
             color:rgba(2,122,151,1);
+            font-weight: bolder;
          
         }
         .show-info-icon{
@@ -205,11 +241,71 @@
 }
 
 
+.location-hour{
+    width: 700px;
+    height:auto;
+    margin-left: 10%;
+    
+}
+
 .reviews{
     width: 700px;
     height:auto;
-    margin-left: 5%;
+    margin-left: 10%;
+}
+
+.map-direction-description{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    max-width: 315px;
+}
+
+.address-description{
+    overflow-wrap: break-word;
+  
+    a{
+        color:rgba(2,122,151,1);
+        font-weight: bolder;
+        }
+}
+
+.mini-direction-button{
+    padding:8px;
+    border-radius: 3px;
+    border:1px solid lightgray;
+    font-family: 'Poppins';
+    font-size: 16px;
+    background-color: white;
+    a{
+        color: black;
+        font-weight: 600;
+        
+    }
 }
 
 
 
+.mini-direction-button:hover{
+    background-color: lightgray;
+    transition: all ease 0.8s;
+}
+
+.location-businesshour-div{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size:16px;
+   
+}
+
+.business-show-hours-item{
+    display:flex;
+    flex-direction: row;
+}
+
+.open-close-business{
+    margin-left: 40px;
+}

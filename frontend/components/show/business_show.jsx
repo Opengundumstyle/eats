@@ -30,13 +30,20 @@ class BusinessShow  extends React.Component{
 
   }
 
+  getCategory(categories){
+    let categoriesStr = ''
+     for(let i = 0 ; i < categories.length -1 ; i++){
+         categoriesStr = categoriesStr + categories[i] +', '
+     }
+     return categoriesStr + categories[categories.length-1]
+  }
+
   reviewsNums(reviews){
     let counts = 0;
     for(let i = 0; i < reviews.length; i++){
         counts += 1;
     }
-
-    return counts===0?'no reviews yet':counts
+    return counts
   
   }
   
@@ -47,6 +54,16 @@ class BusinessShow  extends React.Component{
     const business = this.props.business
     const businessId = this.props.businessId
     const rating = this.getRating(business.business_rating)
+
+    let categoryArr = []
+
+    for(let catogory in business.categoriesItem ){
+       categoryArr.push(catogory)
+    }
+
+    const categoryStr = this.getCategory(categoryArr)
+    
+
     let displayStar 
      
     switch (rating) {
@@ -90,14 +107,18 @@ class BusinessShow  extends React.Component{
                 <h1>{business.name}</h1>
              </div>
             <div className='showcase-photos'>
-              <div><img className="business-pic" src={business.photoUrl}/></div>
-              <div><img className="business-pic" src={business.photoUrl}/></div>
+                  <div><img className="business-pic" src={business.photoUrl}/></div>
+                  <div><img className="business-pic" src={business.photoUrl}/></div>
+                  <div><img className="business-pic2" src={business.photoUrl}/></div>
+                  <div><img className="business-pic3" src={business.photoUrl}/></div>
            </div>
            
           <div className='showpage-info'>
                   <div className='showpage-rating'>
                       {displayStar} 
-                      <div className='rating-counts'>{`${this.reviewsNums(reviews)}`}&nbsp;reviews </div>
+                      {this.reviewsNums(reviews) === 0? <div className='no-review-tag'>no reviews yet</div>:
+                      <div className='rating-counts'>{`${this.reviewsNums(reviews)}`}&nbsp;review </div>
+                      }
                   </div>
                   
                   <div className='showpage-status-price-categories'>
@@ -109,7 +130,7 @@ class BusinessShow  extends React.Component{
                       <div className='show-dot'>•</div>
                       <div>{business.price}</div>
                       <div className='show-dot'>•</div>
-                      <div>categories</div>
+                      <div className='categoryStr'>{categoryStr}</div>
                   </div>
                 
                   <div className='showpage-businesshour'>
@@ -133,8 +154,11 @@ class BusinessShow  extends React.Component{
                 path="/businesses/:businessId/review"
                 component={CreateFormContainer}
                 />
-                   <hr />
-           </div>
+                  
+            </div>
+
+
+
            <div>
             <BusinessDetail businessId={businessId} business={business} reviews={reviews}/>
           </div>

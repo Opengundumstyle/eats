@@ -7,6 +7,7 @@ const Greeting = ({currentUser, logout}) =>{
    
    const dropdownRef = useRef(null)
    const [inActive,setIsActive] = useDetectOutsideClick(dropdownRef,false)
+   
    const onClick = () => setIsActive(!inActive)
 
    const sessionLinks = () => (

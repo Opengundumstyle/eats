@@ -1,26 +1,41 @@
-import React from 'react';
+import React,{useRef} from 'react';
+import { useDetectOutsideClick } from '../greeting/greeting_util';
 import { Link } from 'react-router-dom';
 import { IoPersonCircleSharp } from "react-icons/io5";
 import {FaRegStarHalf,FaRegStar} from 'react-icons/fa'
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 const ReviewIndex = (props) =>{
       const review = props.review
       const {rating,body,reviewer} = review
       const currentUserId = props.currentUserId
       const businessId = props.businessId
-     
-     
-     const displayEditDelete =()=>{
 
-          console.log('see the body',body)
+      const dropdownRef = useRef(null)
+      const [isActive,setIsActive] = useDetectOutsideClick(dropdownRef,false)
+
+      const onClick =()=> setIsActive(!isActive)
+     
+      const displayEditDelete =()=>{
 
           return (
-               <div>
-                   <Link to={{pathname:`/reviews/edit/${review.id}/business/${businessId}`,state:body}}>Edit Review</Link> 
-                    
-                  <button onClick={()=>props.deleteReview(review.id)}>
-                       deleteReview
-                  </button>
+               <div className='review-dropdown'>
+
+                    <button  className= 'review-dropbtn' onClick={onClick} > 
+                         < HiOutlineDotsHorizontal size="1.3rem" ref={dropdownRef} className={isActive ?'active':'inactive'}/>
+                    </button>
+
+                    <div ref={dropdownRef} className={`review-menu ${isActive ? 'active' : 'inactive'}`}>
+
+                         <div className='edit-review-button'>
+                           <Link to={{pathname:`/reviews/edit/${review.id}/business/${businessId}`,state:body}} className='edit-link'>Edit&nbsp;review</Link>
+                        </div>
+
+                         <div onClick={()=>props.deleteReview(review.id)} className='deleteReview-button'>
+                              Remove review
+                         </div>
+                       
+                    </div>
                </div>
           )
      }
@@ -31,7 +46,7 @@ const ReviewIndex = (props) =>{
      
         switch (rating) {
             case 1:
-              displayStar = <FaRegStar color="yellow"/>
+              displayStar = <FaRegStar color="red"/>
                 break;
             case 1.5:
                 displayStar = <div><FaRegStar color="red"/><br /><FaRegStarHalf color="yellow"/></div>
@@ -65,12 +80,11 @@ const ReviewIndex = (props) =>{
         
      }
 
-
-
-
       return (
            <div className='review'>
-                    <div className='name-rating-body'>
+                              {review.user_id === currentUserId ?
+                              displayEditDelete() : null }
+                    <div className='name-rating-body'> 
                          <div className='name-icon-show'>
                               <IoPersonCircleSharp size='5em' color='gray'/>
                               <div className='reviwer-name'>{reviewer}</div>
@@ -78,7 +92,6 @@ const ReviewIndex = (props) =>{
                          { displayStar(rating)}
                          <div className='review'>{body}</div>
                     </div> 
-                      {review.user_id === currentUserId ? displayEditDelete() : null }
                     <br />
              </div>
       )

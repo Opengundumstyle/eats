@@ -20,6 +20,7 @@
 .review{
     font-size: 14px;
     font-family: 'Open Sans';
+    padding:5px;
 }
 
 .review-nav{
@@ -136,12 +137,6 @@
     position: absolute; 
 }
 
-
-
-
-
-
-
 .create-form-container{
    margin:auto;
    width:600px;
@@ -255,13 +250,13 @@
         padding: 10px 50px;
         float:left;
         box-shadow: 1px 2px 2px 1px rgba(5, 15, 130, .2);
+       
       } 
     }
     
   
 
     .cancel-button{
-        // position: absolute;
         top:600px;
         right:500px;
         bottom:10px;
@@ -275,8 +270,91 @@
             box-shadow: 1px 2px 2px 1px rgba(5, 15, 130, .2);
             font-weight: 500;
             padding-left: 10px;
-            padding-right: 10px;
-          
-           
+            padding-right: 10px;   
         }
     }
+
+    .review-dropdown{
+        float:right;
+    }
+
+    .review-menu{
+        background: #ffffff;
+        border-radius: 5px;
+        padding:12px;
+        width:auto;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+        z-index:8;
+        right:0;
+        margin-left: -100px;
+        font-family: 'Open Sans';
+        font-size: 14px;
+      
+
+        .edit-review-button{
+           text-decoration: none;
+           padding: 5px;
+           cursor: pointer;
+           border-radius: 3px;
+                .edit-link{
+                    color: black;
+                    font-weight: 600;
+                    
+                }
+        }
+
+        .edit-review-button:hover{
+            background-color: rgb(233, 231, 231);
+        }
+        
+        .deleteReview-button{
+            font-weight: bolder;
+            color: black;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .deleteReview-button:hover{
+            background-color:  rgb(233, 231, 231);
+        }
+
+     }
+    
+    .review-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    
+    
+    .review-menu:hover {
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+      }
+
+    .review-dropbtn {
+        background: #ffffff;
+        border-radius: 90px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left:10px;   
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        border: none;
+        vertical-align: middle;
+        transition: box-shadow 0.4s ease;
+    }
+    
+    .review-dropbtn:hover{
+         background-color:rgb(232, 77, 54);
+    }
+    
+    // .review-dropbtn .active{
+    //     background:rgb(232, 77, 54);
+       
+    // }
