@@ -72,10 +72,13 @@ ul li:first-child{
   cursor: pointer;
   padding:10px;
   border-radius: 5px 5px 5px 5px;
+  border: 1px solid lightgray;
+ 
 }
 
 .login-nav:hover{
     background-color: lightgray;
+    transition: all ease 0.8s;
 }
 
 .logintext{
@@ -106,6 +109,7 @@ ul li:first-child{
     color:rgba(255, 255, 255, 1.2);
     background:rgb(234, 88, 65);
     box-shadow: 0 5px 15px rgba(232, 77, 54, 0.4);
+    transition: all ease 0.4s;
 }
 
 .menu{

@@ -150,11 +150,19 @@ body{
       #filler1{
         padding: 5px;
         cursor: pointer;
+        font-size: 14px;
+        a{
+          color: black;
+           }
       }
 
       #filler2{
         padding: 5px;
         cursor: pointer;
+        font-size: 14px;
+        a{ 
+           color: black;
+            }
       }
 
       #filler3{
@@ -168,26 +176,10 @@ body{
         cursor: pointer;
       }
    
-      .filler3-text{
-          display: none;
-          padding:0;
-      }
-
-      .filler4-text{
-        display: none;
-        padding:0;
-        margin-top: 60px;
-        font-size: 14px;
-        right: 110px;
-        z-index: 4;
-        position: absolute;
-        background-color: lightgrey;
-        
-    }
 
     .filler3-hover{
         display:none ;
-        font-size: 14px;
+        font-size: 12px;
         position: absolute;
         right: 140px;
         z-index: 4;
@@ -197,7 +189,7 @@ body{
 
     .filler4-hover{
         display:none ;
-        font-size: 14px;
+        font-size: 12px;
         position: absolute;
         right: 105px;
         z-index: 4;

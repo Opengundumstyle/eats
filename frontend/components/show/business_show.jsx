@@ -156,9 +156,6 @@ class BusinessShow  extends React.Component{
                 />
                   
             </div>
-
-
-
            <div>
             <BusinessDetail businessId={businessId} business={business} reviews={reviews}/>
           </div>
