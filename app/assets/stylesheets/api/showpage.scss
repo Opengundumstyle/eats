@@ -156,14 +156,14 @@
 .business-info{
    position:absolute;
    width:365.34px;
-   right:10%;
    border: 1px solid lightgray;
    border-radius: 3px;
    font-size: 15px;
    font-weight: 500;
    padding:20px;
-   margin-top:37px;
+   margin-top:-10px;
    z-index:1;
+   
 
     .website{
         padding-bottom: 10px;
@@ -309,4 +309,14 @@
 .open-close-business{
     position: absolute;
     margin-left: 60px;
+}
+
+.business-info{
+    margin-left: 880px;
+}
+
+.rating{
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
 }
