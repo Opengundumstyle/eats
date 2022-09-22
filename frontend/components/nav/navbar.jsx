@@ -22,11 +22,11 @@ render(){
                         { this.props.currentUser.id === null? '':
                         <div className='inner-filler'>
                             <div className='filler3-div'>
-                                <div id='filler3'><IoChatbubbleEllipsesOutline size="1.5em"/></div>
+                                <div id='filler3'><IoChatbubbleEllipsesOutline size="1.5em" color='rgba(45,46,47,1)'/></div>
                                     <div className='filler3-hover'>Messages</div>
                             </div>
                             <div className='filler4-div'>
-                                <div id='filler4'><FiBell size="1.5em"/></div>
+                                <div id='filler4'><FiBell size="1.5em" color='rgba(45,46,47,1)'/></div>
                                     <div className='filler4-hover'>Notifications</div>
                             </div>
                         </div>

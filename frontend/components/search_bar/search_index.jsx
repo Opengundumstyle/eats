@@ -43,7 +43,7 @@ class SearchIndex extends React.Component{
                      ))
              }
       }
-        console.log('what is the results',results)
+       
        this.setState({businesses:results})
     
    }
@@ -59,7 +59,7 @@ class SearchIndex extends React.Component{
             <div>
                 <Nav/>
             <div className="search-index-map">
-             <div >
+                <div className="index-search-businesses-info" >
                  <h1 className="result-title">All Results</h1>
                  {businesses.length!==0?
                     businesses.map((business,index) =>
@@ -77,11 +77,11 @@ class SearchIndex extends React.Component{
                             )):
                     <p>We couldn't find a match. Please try another search.</p>}
                 </div>
-                <div className='businesses-map'>
+                  <div className='businesses-map'>
                       <Map businesses={businesses}/>
                   </div>
-                  </div>
             </div>
+        </div>
         )
     }
 }

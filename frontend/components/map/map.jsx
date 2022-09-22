@@ -1,6 +1,5 @@
 import React from 'react'
 import Marker from '../../util/marker';
-// import { withRouter } from 'react-router-dom';
 
 class Map extends React.Component{
 
@@ -29,7 +28,7 @@ class Map extends React.Component{
     console.log('testing the map 2',this.props.businesses)
 
        return(
-          <div id="map-container" ref={map => this.mapNode = map }>
+          <div id="map-container" ref={map => this.mapNode = map } style={{width:342.51,height:690}}>
                 Map
            </div>               
        )
