@@ -43,9 +43,7 @@ class SearchIndex extends React.Component{
                      ))
              }
       }
-       
        this.setState({businesses:results})
-    
    }
 
 
@@ -61,21 +59,23 @@ class SearchIndex extends React.Component{
             <div className="search-index-map">
                 <div className="index-search-businesses-info" >
                  <h1 className="result-title">All Results</h1>
-                 {businesses.length!==0?
-                    businesses.map((business,index) =>
-                         (<IndexItem
-                                business={business}
-                                index={index}
-                                key={business.id}
-                                price={business.price}
-                                openhour={business.openhour}
-                                closehour={business.closehour}
-                                rating={business.rating}
-                                review={business.review}
-                                website= {business.website}
-                                categories={business.categoriesItem}/>
-                            )):
-                    <p>We couldn't find a match. Please try another search.</p>}
+                 {businesses.length === 0?
+                    <p>We couldn't find a match. Please try another search.</p> :
+                  <div> {businesses.map((business,index) =>
+                    (<IndexItem
+                           business={business}
+                           index={index}
+                           key={business.id}
+                           price={business.price}
+                           openhour={business.openhour}
+                           closehour={business.closehour}
+                           rating={business.rating}
+                           review={business.review}
+                           website= {business.website}
+                           categories={business.categoriesItem}/>
+                       ))} 
+                     </div> 
+                        }
                 </div>
                   <div className='businesses-map'>
                       <Map businesses={businesses}/>

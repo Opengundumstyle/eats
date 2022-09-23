@@ -8,7 +8,6 @@ class BusinessIndex extends React.Component {
 
     componentDidMount() {
         this.props.getAll()
-       .then(()=>console.log('businessIndex props',this.props.businesses))
        
     }
   
@@ -31,8 +30,8 @@ class BusinessIndex extends React.Component {
                                     website= {business.website}
                                     categories ={business.categoriesItem}/>
                                            ))}
-                                
                     </div>
+                      
                   <div className='businesses-map'>
                       <Map businesses={this.props.businesses}/>
                   </div>

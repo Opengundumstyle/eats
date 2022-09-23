@@ -4,11 +4,11 @@ class Marker {
     constructor(map){
       this.map = map;
       this.markers = {};
-      // this.codeAddress = this.codeAddress.bind(this)
     }
   
     updateMarker(businesses){
-      const businessesObj = {};
+       const businessesObj = {};
+
        businesses.forEach(business => businessesObj[business.id] = business);
   
       businesses
@@ -61,9 +61,9 @@ class Marker {
 
 
    // helper for updateMarkers
-    removeMarker(marker){
-      this.markers[marker.benchId].setMap(null);
-      delete this.markers[marker.benchId];
+     removeMarker(marker){
+     this.markers[marker.businessId].setMap(null);
+      delete this.markers[marker.businessId];
     }
 
    // helper for createMarkerBusiness
