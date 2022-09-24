@@ -1,33 +1,43 @@
 .businesses-index-item:hover {
-    box-shadow: 2px 2px 2px 2px rgba(5, 15, 130, .2);
-    transition: all ease 0.8s;
+    box-shadow: 0 0 18px #0000001a;
+    transition: all ease 0.4s;
+    cursor: pointer;
 }
 
 .businesses-index-item {
     padding:10px;
     border-color: antiquewhite;
     border: 1px solid lightgrey;
+    border-left: none;
+    border-right:none ;
+    border-top:none;
     margin:10px;
+    width: 732.9px;
     display: flex;
     flex-direction: row;
     gap:2rem;
     height:274.41px;
-    // width:744.2px;
     overflow: hidden;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 4px;
+    font-family: 'Open Sans';
 }
 .index-image-div{
     margin-top:10px;
 }
 
-.index-reviews{
-    color:#6E7072;
-    cursor: pointer;
-}
-
 .index-item-info{
     height:170px;
     overflow: hidden;
+}
+
+.index-item-name{
+    font-size: 25px;
+    font-weight: bolder;
+   padding-top:10px;
+}
+.index-item-copy{
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .index-website{
@@ -58,6 +68,11 @@
     display: flex;
     flex-direction: row;
     gap:0.3rem;
+    .index-reviews{
+        color:#6E7072;
+        cursor: pointer;
+        padding-right: 8px;
+    }
 }
 
 .categories-index{

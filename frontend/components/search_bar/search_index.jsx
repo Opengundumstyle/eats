@@ -50,14 +50,14 @@ class SearchIndex extends React.Component{
     render(){
     
         const  businesses = this.state.businesses;
-        console.log('what is this state',this.state)
-        console.log('businesses rendeing',businesses)
-        
+        // console.log('what is this state',this.state)
+        // console.log('businesses rendeing',businesses)
         return(
             <div>
                 <Nav/>
             <div className="search-index-map">
                 <div className="index-search-businesses-info" >
+                 
                  <h1 className="result-title">All Results</h1>
                  {businesses.length === 0?
                     <p>We couldn't find a match. Please try another search.</p> :

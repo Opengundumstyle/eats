@@ -18,7 +18,6 @@ const mapDispatchToProps = dispatch => ({
      getOne: id => dispatch(getOne(id)),
      createReview: review =>dispatch(createReview(review)),
      refleshReview: ()=>dispatch(refleshReview())
-     
 })
 
 export default connect(

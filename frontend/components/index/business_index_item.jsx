@@ -33,30 +33,21 @@ reviewsNums(reviews){
   
 
 getCategory(categories){
-    
      let categoriesArr = Object.values(categories);
-    
      let categoryList = [];
     for(let category of categoriesArr){
         categoryList.push(<div className='category-tag'>{category.category}</div>)
     }
        return categoryList
-
 }
 
 render(){
-
         const {business_rating,name,price,openhour,closehour,review,website} = this.props.business;
         const index = this.props.index
         const rating = this.getRating(business_rating)
         const categories = this.props.categories
         let categoriesList = this.getCategory(categories)
-      
-    
-        
-
         let displayStar 
-     
         switch (rating) {
             case 1:
               displayStar = <FaRegStar color="yellow"/>
@@ -101,10 +92,10 @@ render(){
 
                 <div className='index-info-div'>
                             <div className="index-item-info">
-                               <h1>{`${index+1}. ${name}`}</h1>
-                                <span className="index-item-copy">
+                               <div className='index-item-name'>{`${index+1}. ${name}`}</div>
+                                <div className="index-item-copy">
                                     {business_rating ? displayStar : ''}
-                                </span>
+                                </div>
                                 <div className='categories-price'>
                                   <div className='categories-index'>{categoriesList}</div>
                                   <div>{price}</div> 
@@ -122,7 +113,7 @@ render(){
                           <hr />
                            {
                             <div>
-                                {website?<a href={website} target='_blank'><button className='index-website'>Website</button></a>:''}
+                                {website?<a href={website} target='_blank'><button className='index-website'>View&nbsp;Website</button></a>:''}
                             </div>
 }
                 </div>
