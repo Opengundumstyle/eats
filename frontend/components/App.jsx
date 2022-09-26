@@ -10,8 +10,8 @@ import business_index_container from "./index/business_index_container";
 import EditReview from "./show/edit_review_from_container";
 import SearchResult from "./search_bar/search_index_container";
 
+
 const App = () => (
- 
      <div>
        <Switch>
         <Route exact path="/" component={business_index_container}/>

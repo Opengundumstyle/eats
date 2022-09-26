@@ -20,7 +20,7 @@ class Search extends React.Component {
         e.preventDefault()
         let where = this.state.where;
         let near = this.state.near;
-        this.props.history.push(`/search?where=${where}&near=${near}`)
+        this.props.history.push(`/search?where=${where}&near=${near}&price=`)
     }
 
     render(){

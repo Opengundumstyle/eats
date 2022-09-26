@@ -14,7 +14,7 @@ class SearchIndex extends React.Component{
     }
 
     componentDidMount(){
-         console.log('what is the props',this.props)
+         console.log('what is the props in searchindex',this.props)
         this.props.getBusinesses()
         .then(()=>this.setState(this.selectBusinesses()))
     }

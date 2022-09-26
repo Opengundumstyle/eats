@@ -12,7 +12,7 @@ import { MdOutlineCheckCircleOutline } from "react-icons/md";
 class BusinessShow  extends React.Component{
       
   componentDidMount(){
-   
+     
      this.props.getOne(this.props.businessId)
         
   }
@@ -49,12 +49,12 @@ class BusinessShow  extends React.Component{
   
   
   render(){
-  
+    console.log('what is props in businessshow',this.props)
     const reviews = Object.values(this.props.reviews)
     const business = this.props.business
     const businessId = this.props.businessId
     const rating = this.getRating(business.business_rating)
-
+   
     let categoryArr = []
 
     for(let catogory in business.categoriesItem ){
