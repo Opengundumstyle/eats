@@ -154,7 +154,6 @@ class BusinessShow  extends React.Component{
                 path="/businesses/:businessId/review"
                 component={CreateFormContainer}
                 />
-                  
             </div>
            <div>
             <BusinessDetail businessId={businessId} business={business} reviews={reviews}/>

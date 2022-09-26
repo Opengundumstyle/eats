@@ -2,6 +2,7 @@ import React from 'react';
 import {withRouter} from 'react-router-dom'
 import {FaRegStarHalf,FaRegStar} from 'react-icons/fa'
 import { FaRegComment,FaRegClock } from "react-icons/fa";
+
 class IndexItem extends React.Component{
 
    constructor(props){

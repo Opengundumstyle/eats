@@ -187,7 +187,10 @@ b20=Business.create(name:'Ozumo',address:'161 Steuart St San Francisco, CA 94105
 file20=open('https://active-storage-brain-eats.s3.us-west-1.amazonaws.com/ozumo.jpeg')
 b20.photo.attach(io: file20, filename: 'ozumo.jpeg')
 
-
+#korean
+b37=Business.create(name:'San Ho Won',address:'2170 Bryant St San Francisco, CA 94110',openhour:'5PM',closehour:'9:30PM',price:'$$$$',phone:'(415) 868-4479',website:'https://sanhowon.com')
+file37=open('https://active-storage-brain-eats.s3.us-west-1.amazonaws.com/san+ho+won.jpeg')
+b37.photo.attach(io: file37, filename: 'san ho won.jpeg')
 
 #Reviews Seed
 #user1
@@ -269,7 +272,8 @@ cantoneseCategory=Category.create(category:"Cantonese")
 juicebarSmoothieCategory=Category.create(category:"Juice Bars & Smoothies")
 tearoomsCategory=Category.create(category:"Tea Rooms")
 dessertsCategory=Category.create(category:"Desserts")
-
+barbequeCategory=Category.create(category:"Barbeque")
+koreanCategory=Category.create(category:"Korean")
 
 
 #Tag Seeds
@@ -437,3 +441,7 @@ Tag.create({:category_id=>juicebarSmoothieCategory.id,:business_id=>b35.id})
 #plentea
 Tag.create({:category_id=>bubbleteaCategory.id,:business_id=>b36.id})
 Tag.create({:category_id=>tearoomsCategory.id,:business_id=>b36.id})
+
+#SanhoWan
+Tag.create({:category_id=>barbequeCategory.id,:business_id=>b37.id})
+Tag.create({:category_id=>koreanCategory.id,:business_id=>b37.id})

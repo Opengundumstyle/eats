@@ -2,6 +2,7 @@ import React from "react";
 import Nav from '../nav/navbar_container'
 import IndexItem from "../index/business_index_item";
 import  Map from '../map/map';
+import Filter from "../filter/filter";
 
 class SearchIndex extends React.Component{
 
@@ -31,9 +32,9 @@ class SearchIndex extends React.Component{
        let params = new URLSearchParams(location.search);
        let where = params.get("where").replace('%20', ' ').toLowerCase();
        let near = params.get("near").replace('%20', ' ').toLowerCase();
+       let price = params.get("price")
+
        let results = [];
-       console.log('what is this businesses',businesses)
-   
        if(near==='' || near ==="san francisco" || near==="sf"){
             if(where ===''){
                 results = businesses
@@ -43,6 +44,12 @@ class SearchIndex extends React.Component{
                      ))
              }
       }
+
+      if(price!==''){
+         results = businesses.filter(business=>(
+              business.price.includes(price)
+         ))
+      }
        this.setState({businesses:results})
    }
 
@@ -50,14 +57,16 @@ class SearchIndex extends React.Component{
     render(){
     
         const  businesses = this.state.businesses;
-        // console.log('what is this state',this.state)
-        // console.log('businesses rendeing',businesses)
         return(
             <div>
                 <Nav/>
             <div className="search-index-map">
+
+                 <div className="filter-div">
+                 <Filter props={this.props}/>
+                 </div>
+
                 <div className="index-search-businesses-info" >
-                 
                  <h1 className="result-title">All Results</h1>
                  {businesses.length === 0?
                     <p>We couldn't find a match. Please try another search.</p> :
@@ -76,10 +85,12 @@ class SearchIndex extends React.Component{
                        ))} 
                      </div> 
                         }
-                </div>
-                  <div className='businesses-map'>
+                 </div>
+
+                 <div className='businesses-map'>
                       <Map businesses={businesses}/>
-                  </div>
+                 </div>
+
             </div>
         </div>
         )

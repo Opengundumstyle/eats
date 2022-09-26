@@ -101,9 +101,9 @@
 .search-index-map{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
      .index-search-businesses-info{
-        width: 900px;
+        min-width: 500px;
      }
     
 }
@@ -112,6 +112,7 @@
     width: 200px;
     height: 200px;
 }
+
 
 
 
