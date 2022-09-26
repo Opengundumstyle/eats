@@ -47,7 +47,7 @@ class SearchIndex extends React.Component{
 
       if(price!==''){
          results = businesses.filter(business=>(
-              business.price.includes(price)
+              business.price === price
          ))
       }
        this.setState({businesses:results})
