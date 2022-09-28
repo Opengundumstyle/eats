@@ -15,18 +15,18 @@ render(){
                     <Search/>
                 <div className='filler-links'>
                    
-                   <div id="filler1"> <a href="#">For&nbsp;Businesses</a></div>
+                   <div id="filler1"> <a href="#">All&nbsp;Businesses</a></div>
     
                    <div id="filler2"> <a href="#">Write&nbsp;a&nbsp;Review</a></div>
                     <div className='filler-greeting'>
                         { this.props.currentUser.id === null? '':
                         <div className='inner-filler'>
                             <div className='filler3-div'>
-                                <div id='filler3'><IoChatbubbleEllipsesOutline size="1.5em" color='rgba(45,46,47,1)'/></div>
+                                <div id='filler3'><IoChatbubbleEllipsesOutline  size="1.5em" /></div>
                                     <div className='filler3-hover'>Messages</div>
                             </div>
                             <div className='filler4-div'>
-                                <div id='filler4'><FiBell size="1.5em" color='rgba(45,46,47,1)'/></div>
+                                <div id='filler4'><FiBell size="1.5em"/></div>
                                     <div className='filler4-hover'>Notifications</div>
                             </div>
                         </div>

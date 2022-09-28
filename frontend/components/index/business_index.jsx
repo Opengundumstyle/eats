@@ -12,9 +12,6 @@ class BusinessIndex extends React.Component {
     }
 
     render() {
-
-        console.log('what is props in businessindex',this.props)
-        
         return (
             <div>
                  < Navbar/>

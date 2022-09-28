@@ -9,12 +9,14 @@ import createReview from './show/create_review_form_container'
 import business_index_container from "./index/business_index_container";
 import EditReview from "./show/edit_review_from_container";
 import SearchResult from "./search_bar/search_index_container";
+import splash from "./splash/splash";
 
 
 const App = () => (
      <div>
-       <Switch>
-        <Route exact path="/" component={business_index_container}/>
+        <Switch>
+        <Route exact path="/" component={splash}/>
+        <Route  exact path="/businesses" component={business_index_container}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer}/>
         <Route path="/businesses/:businessId/review" component={createReview} />

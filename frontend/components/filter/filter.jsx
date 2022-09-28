@@ -11,7 +11,10 @@ const Filter = ({props}) =>{
      let price = e.target.value;
      props.history.push(`/search?where=&near=&price=${price}`)
  }
+ 
+console.log('what is the props in Filter',props)
     return(
+      
           <div className="filters-container">
             <div className="filter-title">Filters</div>
             <div className="price-filter-container">

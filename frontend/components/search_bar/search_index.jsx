@@ -14,7 +14,6 @@ class SearchIndex extends React.Component{
     }
 
     componentDidMount(){
-         console.log('what is the props in searchindex',this.props)
         this.props.getBusinesses()
         .then(()=>this.setState(this.selectBusinesses()))
     }
@@ -57,6 +56,7 @@ class SearchIndex extends React.Component{
     render(){
     
         const  businesses = this.state.businesses;
+        console.log('wat is the searchindexprops',this.props)
         return(
             <div>
                 <Nav/>

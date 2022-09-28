@@ -7,7 +7,7 @@ import {login, logout, signup } from './actions/session_actions'
 import {getAllBusinesses,createReview} from './util/businesses_api_util'
 
 document.addEventListener("DOMContentLoaded", () => {
-
+  
   window.signup= signup;
   window.login = login;
   window.logout = logout;
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.createReview = createReview
  let store = configureStore()
   console.log(store.getState())
-  
   const root = document.getElementById("root");
   
   if (window.currentUser) {
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     delete window.currentUser;
   } else {
     store = configureStore();
-  }
+  } 
    window.store = store
 
   ReactDOM.render(<Root store={store}/>, root);

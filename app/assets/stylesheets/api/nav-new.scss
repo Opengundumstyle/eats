@@ -1,8 +1,5 @@
 
-/* .search-container{
-    position: fixed;
-    margin-left: 150px;
-} */
+
 
 .nav-logo{
     height:100px;
@@ -54,44 +51,35 @@ body{
 }
 
 
-.filler-links > *{
-    background-color: white;
-   
-}
-
-
   
-   #filler2:hover{
-    background-color: rgb(228, 222, 222);
-    transition: all ease 0.5s;
-    padding:5px;
-    border-radius: 5px 5px 5px 5px;
- 
-    
-}
 
-   #filler1:hover{
+#filler1:hover{
     background-color:  rgb(228, 222, 222);
     transition: all ease 0.5s;
     padding:5px;
     border-radius: 5px 5px 5px 5px;
-   
+    
 }
-    #filler3:hover {
-        background-color:  rgb(228, 222, 222);
-        transition: all ease 0.5s;
-        padding:5px;
-        border-radius:50%;
-    }
+
+#filler2:hover{
+ background-color: rgb(228, 222, 222);
+ transition: all ease 0.5s;
+ padding:5px;
+ border-radius: 5px 5px 5px 5px;
+}
+
+#filler3:hover {
+    background-color:  rgb(228, 222, 222);
+    transition: all ease 0.5s;
+    padding:5px;
+}
 
 
-    #filler4:hover {
-        background-color:  rgb(228, 222, 222);
-        transition: all ease 0.5s;
-        padding:5px;
-        border-radius:50%;
-
-    }
+#filler4:hover {
+    background-color:  rgb(228, 222, 222);
+    transition: all ease 0.5s;
+    padding:5px;
+}
 
     .inner-filler{
          display: flex;
@@ -164,6 +152,7 @@ body{
         padding: 5px;
         cursor: pointer;
         font-size: 14px;
+        
        
         a{ 
             font-weight: 900;
@@ -174,12 +163,20 @@ body{
       #filler3{
         padding: 5px;
         cursor: pointer;
-        
+        color:rgba(45,46,47,1);
+        height: 35px;
+        width: 35px;
+        border-radius:50%;
       }
 
       #filler4{
         padding: 5px;
         cursor: pointer;
+        color:rgba(45,46,47,1);
+        height: 35px;
+        width: 35px;
+        border-radius:50%;
+       
       }
    
 
