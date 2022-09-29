@@ -141,7 +141,7 @@ class BusinessShow  extends React.Component{
            
            <br />
              
-            <Link to="/" className="back-to-home">view more businesses</Link>
+            <Link to="/businesses" className="back-to-home">view more businesses</Link>
             
             <div className='write-review'>
              <button className='submit-review'>
