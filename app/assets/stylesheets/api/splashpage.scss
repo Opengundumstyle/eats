@@ -40,7 +40,44 @@
   left:0;
   z-index: -5;
 
+  .splash-slogan-button{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:30%;
+    left:10%;
+    gap:1rem;
+      .splash-slogan{
+        font-size: 48px;
+        color:white;
+        font-family: 'Poppins';
+        max-width: 800px;
+        overflow-wrap:break-word;
+      }
+      .splash-submit-button{
+        cursor: pointer;
+        color:rgba(250, 243, 243, 0.95);
+        background:#E00707;
+        padding:15px;
+        border-radius: 5px 5px 5px 5px;
+        border: none;
+        font-size: 16px;
+        font-family: 'Poppins';
+        display: flex;
+        flex-direction: row;
+        gap:0.8rem;
+        align-items: center;
+  
+         
+      }
+      .splash-submit-button:hover{
+        color:rgba(255, 255, 255, 1);
+        background:#f60a0a;
+        transition: all ease 0.8s;
+      }
+  }
 }
+
 
 .img-button{
   position: absolute;

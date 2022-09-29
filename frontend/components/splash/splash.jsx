@@ -6,12 +6,13 @@ class Splash extends React.Component{
       constructor(props){
            super(props)
       }
-      
+        
    render(){
+ 
      return(
         <div className='splash-page-div'>
           <div><Navbar/></div>
-          <div><Slider/></div>
+          <div><Slider props={this.props}/></div>
         </div>
           
      )
