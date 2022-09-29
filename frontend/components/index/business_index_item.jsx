@@ -10,7 +10,6 @@ class IndexItem extends React.Component{
        this.handleClick = this.handleClick.bind(this)
    }
 
-
 handleClick(){
     const businessId = this.props.business.id
      this.props.history.push(`/businesses/${businessId}`)
