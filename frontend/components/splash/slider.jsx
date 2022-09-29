@@ -19,7 +19,7 @@ const Slider =({props})=>{
          'Miso, shoyu, shio, tonkotsu—we have them all',
          'Ramen In Bay Area'],
          [window.splash3URL,
-         'Bubble Tea',
+         'bubble',
          'Life is short,make it sweet.',
          'Boba Milk Tea ']
          ]
