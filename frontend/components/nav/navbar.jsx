@@ -15,9 +15,9 @@ render(){
                     <Search/>
                 <div className='filler-links'>
                    
-                   <div id="filler1"> <a href="#">All&nbsp;Businesses</a></div>
+                   <div id="filler1"> <Link to='/businesses'>All&nbsp;Businesses</Link></div>
     
-                   <div id="filler2"> <a href="#">Write&nbsp;a&nbsp;Review</a></div>
+                   <div id="filler2"> <Link to='/businesses'>Write&nbsp;a&nbsp;Review</Link></div>
                     <div className='filler-greeting'>
                         { this.props.currentUser.id === null? '':
                         <div className='inner-filler'>
