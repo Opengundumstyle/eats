@@ -18,11 +18,6 @@ const receiveBusiness = ({business,reviews}) =>({
        reviews
 })
 
-// const receiveReviews = reviews => ({
-//        type: RECEIVE_REVIEWS,
-//        reviews
-//      });
-
 const removeReview = reviewId => ({
        type: REMOVE_REVIEW,
        reviewId
@@ -58,11 +53,6 @@ export const deleteReview = reviewId => dispatch => (
        BusinessesAPIUtil.deleteReview(reviewId)
          .then(() => dispatch(removeReview(reviewId)))
      );
-
-// export const deleteReview = reviewId => dispatch => (
-//        BusinessesAPIUtil.deleteReview(reviewId)
-//          .then(reviews => dispatch(receiveReviews(reviews)))
-//      );
 
 export const getAll = () => dispatch =>{
        return BusinessesAPIUtil.getAllBusinesses()

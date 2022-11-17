@@ -4,11 +4,7 @@ import { AiOutlineVerticalLeft,AiOutlineVerticalRight} from "react-icons/ai";
 let count = 0;
 let slideInterval;
 
-
 const Slider =({props})=>{
-    
-   console.log('what is props in slider',props)
-
     const sliderPictures = [
          [window.splash1URL,
          'chinese',
@@ -33,9 +29,8 @@ const Slider =({props})=>{
     }
 
     useEffect(()=>{
+
          slideRef.current.addEventListener('animationend',removeAnimation);
-        //  slideRef.current.addEventListener('mouseenter',pauseSlider);
-        //  slideRef.current.addEventListener('mouseleave',startSlider);
          startSlider();
          return() =>{
             pauseSlider()

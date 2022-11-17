@@ -9,8 +9,6 @@ const BusinessDetail = ({businessId,business,reviews}) =>{
 
   let address = business.address;
   let encodedAddress = encodeURIComponent(address);
-  console.log('show me the address',encodedAddress)
-  
    return(
          <div className='business-show'>
              

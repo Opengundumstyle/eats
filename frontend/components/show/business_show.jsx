@@ -9,7 +9,7 @@ import {FaRegStarHalf,FaRegStar} from 'react-icons/fa'
 import {IoMdStarOutline} from "react-icons/io";
 import { MdOutlineCheckCircleOutline } from "react-icons/md";
 
-class BusinessShow  extends React.Component{
+class BusinessShow extends React.Component{
       
   componentDidMount(){
      
@@ -44,12 +44,11 @@ class BusinessShow  extends React.Component{
         counts += 1;
     }
     return counts
-  
   }
   
   
   render(){
-    console.log('what is props in businessshow',this.props)
+   
     const reviews = Object.values(this.props.reviews)
     const business = this.props.business
     const businessId = this.props.businessId

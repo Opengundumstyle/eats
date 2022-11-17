@@ -7,9 +7,6 @@ class Api::BusinessesController < ApplicationController
      
      def show
            @business = Business.find(params[:id])
-        #    if !@business.reviews
-        #       @business.reviews = []
-        #    end
      end
 
      

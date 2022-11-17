@@ -13,14 +13,6 @@ export default (oldstate ={},action)=>{
         case RECEIVE_BUSINESS:
              newState[action.business.id] = action.business
              return newState
-      
-        // case RECEIVE_REVIEW:
-        //     const {review,business_rating} = action;
-            
-        //     newState[review.business_id].reviewIds.push(review.id)
-        //     newState[review.business_id].business_rating =  business_rating
-        //     return newState
-            
         default: 
             return oldstate;
      }

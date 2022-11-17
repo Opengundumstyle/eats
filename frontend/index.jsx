@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getAllBusinesses = getAllBusinesses
   window.createReview = createReview
  let store = configureStore()
-  console.log(store.getState())
   const root = document.getElementById("root");
   
   if (window.currentUser) {
