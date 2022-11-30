@@ -12,6 +12,7 @@ const ReviewIndex = (props) =>{
       const businessId = props.businessId
 
       const dropdownRef = useRef(null)
+      
       const [isActive,setIsActive] = useDetectOutsideClick(dropdownRef,false)
 
       const onClick =()=> setIsActive(!isActive)

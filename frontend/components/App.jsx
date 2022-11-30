@@ -15,8 +15,8 @@ import splash from "./splash/splash";
 const App = () => (
      <div>
         <Switch>
-        <Route  exact path="/" component={splash}/>
-        <Route  exact path="/businesses" component={business_index_container}/>
+        <Route exact path="/" component={splash}/>
+        <Route exact path="/businesses" component={business_index_container}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer}/>
         <Route path="/businesses/:businessId/review" component={createReview} />
@@ -24,7 +24,7 @@ const App = () => (
         <Route path='/reviews/edit/:reviewId/business/:businessId' component={EditReview}/>
         <Route path='/search' component={SearchResult}/>
       </Switch>
-      </div>
+    </div>
 );
 
 export default App;

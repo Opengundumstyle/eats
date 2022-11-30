@@ -75,7 +75,7 @@ class Marker {
                  map.setCenter(results[0].geometry.location);
                  let lat = results[0].geometry.location.lat()
                  let lng = results[0].geometry.location.lng()
-                   position = {lat:lat,lng:lng}
+                 position = {lat:lat,lng:lng}
               }
               // }else {
               //   alert('your gay: ' + status);

@@ -8,7 +8,6 @@ const reviewReducer = (oldState={},action)=> {
                 case RECEIVE_BUSINESS:
                      return action.reviews || {}
                 case RECEIVE_REVIEWS:
-                    
                 case REMOVE_REVIEW:
                       delete nextState[action.reviewId]
                       return nextState
@@ -20,9 +19,6 @@ const reviewReducer = (oldState={},action)=> {
                     return oldState; 
             }
 }
-
-
-
 
 
 export default reviewReducer
