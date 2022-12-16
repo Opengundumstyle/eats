@@ -21,7 +21,7 @@
 
 
 # Wiki
-This project repository has a great wiki  that you should consider reading! It goes into detail about the project from a more technical aspect. If you are interested in learning more about the Eats, go ahead and check it out!
+This project repository has a great wiki  that you should consider reading! It goes into detail about the project from a more technical aspect. If you are interested in learning more about the Eats, go ahead and check it out! [here.](https://github.com/Opengundumstyle/eats/wiki)
 
 # Tech Stack 
 
