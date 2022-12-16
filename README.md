@@ -14,7 +14,13 @@
 
 **Feature 2: Search/Filters**
 
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="600" height="auto">
+
 **Feature 3: Reviews/Ratings - CRUD**
+
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview.gif" width="600" height="auto">
+
+<!-- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.gif" width="600" height="auto"> -->
 
 **Feature 4: Map - Google Maps**
 
