@@ -14,16 +14,20 @@
 
 **Feature 2: Search/Filters**
 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="600" height="auto">
+ <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/search.png" width="600" height="auto">
+ <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="600" height="auto">
+ <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="600" height="auto">
 
 **Feature 3: Reviews/Ratings - CRUD**
 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview.gif" width="600" height="auto">
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview%202.gif" width="600" height="auto">
 
-<!-- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.gif" width="600" height="auto"> -->
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.png" width="600" height="auto">
 
 **Feature 4: Map - Google Maps**
-
+<!-- 
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif" width="600" height="auto"> -->
+![](https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif)
 
 **Bonus: Mark reviews funny, cool, useful etc.**
 
