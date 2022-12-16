@@ -1,4 +1,4 @@
-# Eats
+# [Eats](https://yeats.herokuapp.com/#/)
 
 Eats is a parallel version of BrianEats, with same funtionalities of yelp app. It provides a one-stop local platform for consumers to discover,connect and transact with local businesses of all sizes by making it easy to request quote,join a waitlist or make a reservation. 
 
