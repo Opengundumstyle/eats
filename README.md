@@ -5,7 +5,9 @@
 # Functionality & MVPS
 
 **Feature 1: Business Page**
-  
+
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/splash-page.gif" width="600" height="auto">
+
 **Feature 2: Search/Filters**
 
 **Feature 3: Reviews/Ratings - CRUD**
