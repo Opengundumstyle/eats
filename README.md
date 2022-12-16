@@ -10,7 +10,7 @@
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/indexpage.png" width="600" height="auto">
 
-<!-- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/businesspage.png" width="400" height="auto"> -->
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/showbusiness.png" width="400" height="auto">
 
 **Feature 2: Search/Filters**
 
