@@ -2,33 +2,45 @@
 
 **Eats is a parallel version of BrianEats, with same funtionalities of yelp app. It provides a one-stop local 
 platform for consumers to discover,connect and transact with local businesses of all sizes by making it easy 
-to request quote,join a waitlist or make a reservation.**
+to request quote, join a waitlist or make a reservation.**
 
 # Functionality & MVPS
 
-**Feature 1: Business Page**
+<h3>Feature 1: Business Page</h3>
+
+A single page design that contains three part display element: **splash page**, **businesses index page** and **business single page** where user can travel through base on specific need.  
+
+**splash page:**
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/splash-page.gif" width="800" height="auto">
+<br>
+
+**businesses index page:**
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/indexpage.png" width="700" height="auto">
+<br>
+
+**business single page:**
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/showbusiness.png" width="600" height="auto">
+<br>
 
-**Feature 2: Search/Filters**
+<h3>Feature 2: Search/Filters</h3>
 
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/search.png" width="800" height="auto">
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="700" height="auto">
 
-**Feature 3: Reviews/Ratings - CRUD**
+<h3>Feature 3: Reviews/Ratings - CRUD</h3>
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview%202.gif" width="700" height="auto">
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.png" width="700" height="auto">
 
-**Feature 4: Map - Google Maps**
+<h3>Feature 4: Map - Google Maps</h3>
 <!-- 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif" width="700" height="auto"> -->
+
 ![](https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif)
 
 **Bonus: Mark reviews funny, cool, useful etc.**
@@ -43,7 +55,7 @@ This project repository has a great wiki  that you should consider reading! It g
 
 # Tech Stack 
 
-front-end : HTML,CSS,Javascript
+front-end : HTML,CSS,Javascript,React.js,Redux
 
 back-end : SQL, Ruby, Rails
 
