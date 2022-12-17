@@ -11,7 +11,7 @@ to request quote, join a waitlist or make a reservation.**
 A single page design that contains three part display element: **splash page**, **businesses index page** and **business single page** where user can travel through base on specific need.  
 
 **splash page:**
-
+ 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/splash-page.gif" width="800" height="auto">
 <br>
 
