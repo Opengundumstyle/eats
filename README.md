@@ -11,16 +11,22 @@ to request quote, join a waitlist or make a reservation.**
 A single page design that contains three part display element: **splash page**, **businesses index page** and **business single page** where user can travel through base on specific need.  
 
 **splash page:**
+
+ Utilizing react-hooks to showcase several food categories for user in a sliding form.
  
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/splash-page.gif" width="800" height="auto">
 <br>
 
 **businesses index page:**
-
+  
+ Display a selection of businesses in boxes that match with the user end search/filter query ,each box is clickable and have access to the business single page.
+ 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/indexpage.png" width="700" height="auto">
 <br>
 
 **business single page:**
+
+Provides detail information to user include direction, phone numbers, open-hours. And it also contains review component that enables a dynamic user interaction.
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/showbusiness.png" width="600" height="auto">
 <br>
