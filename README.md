@@ -34,9 +34,12 @@ Provides detail information to user including direction, phone numbers, open-hou
 <h3>Feature 2: Search/Filters</h3>
 
    **search:**
-   Use frontend query to filter key data to obtain businesses that match with search submition on catergory, location, name..etc.
- <img src="https://github.com/Opengundumstyle/eats/blob/main/frontend/components/search.gif" width="800" height="auto">
- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
+   Obtain businesses that best match with user input on catergory, location, name..etc through decomposing url string and extracting key words and 
+   searching through businesses prop to generate a new businesses index page, in which deploys react lifecycle method componentDidUpdate() to trigger mapping action when
+   search input is being altered.
+   
+  <img src="https://github.com/Opengundumstyle/eats/blob/main/frontend/components/search.gif" width="800" height="auto">
+  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
  
    **filter:**
    
