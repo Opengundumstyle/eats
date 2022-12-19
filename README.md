@@ -50,8 +50,12 @@ Provides detail information to user including direction, phone numbers, open-hou
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="700" height="auto">
   
 <h3>Feature 3: Reviews/Ratings - CRUD</h3>
+  I designed the review section on a singular page enmulating the real yelp app to create a seemless rating experience. User can scroll through a range of stars based on rating from one to five. Each review will be saved through create review action under business table and ready to be retreived for future edit by the reviewer. 
+  
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview%202.gif" width="700" height="auto">
+
+Registered users are able to create multiple reviews under the business show page and edit & delete their own reviews. 
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.png" width="700" height="auto">
 
