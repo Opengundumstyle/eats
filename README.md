@@ -35,14 +35,18 @@ Provides detail information to user including direction, phone numbers, open-hou
 
    **search:**
    Obtain businesses that best match with user input on catergory, location, name..etc through decomposing url string and extracting key words and 
-   searching through businesses prop to generate a new businesses index page, in which deploys react lifecycle method componentDidUpdate() to trigger mapping action when
+   searching through businesses prop to generate a new businesses index page, in which deploys react lifecycle method **componentDidUpdate()** to trigger mapping action when
    search input is being altered.
    
   <img src="https://github.com/Opengundumstyle/eats/blob/main/frontend/components/search.gif" width="800" height="auto">
+  
+  As we type in ramen and click on the search icon, businesses that categorized as ramen are being shown on index page.
+  
   <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
  
    **filter:**
-   
+    Most common selected food category and price tags are being shown on the left side compoenent enabling user to navigate through specific type of       businesses dynamically. Same businesses index component are being reused for **DRY** code.
+    
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="700" height="auto">
   
 <h3>Feature 3: Reviews/Ratings - CRUD</h3>
