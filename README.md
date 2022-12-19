@@ -33,7 +33,7 @@ Provides detail information to user include direction, phone numbers, open-hours
 
 <h3>Feature 2: Search/Filters</h3>
 
- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/search.png" width="800" height="auto">
+ <img src="https://github.com/Opengundumstyle/eats/blob/main/frontend/components/search.gif" width="800" height="auto">
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="700" height="auto">
 
