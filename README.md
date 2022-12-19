@@ -1,32 +1,52 @@
 # [Eats](https://yeats.herokuapp.com/#/)
 
-**Eats is a parallel version of BrianEats, with same funtionalities of yelp app. It provides a one-stop local platform for consumers to discover,connect and transact with local businesses of all sizes by making it easy to request quote,join a waitlist or make a reservation.**
+**Eats is a parallel version of BrianEats, with same funtionalities of yelp app. It provides a one-stop local 
+platform for consumers to discover,connect and transact with local businesses of all sizes by making it easy 
+to request quote, join a waitlist or make a reservation.**
 
 # Functionality & MVPS
 
-**Feature 1: Business Page**
+<h3>Feature 1: Business Page</h3>
 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/splash-page.gif" width="600" height="auto">
+A single page design that contains three part display element: **splash page**, **businesses index page** and **business single page** where user can travel through base on specific need.  
 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/indexpage.png" width="600" height="auto">
+**splash page:**
 
-<!-- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/businesspage.png" width="400" height="auto"> -->
+ Utilizing react-hooks to showcase several food categories for user in a sliding form.
+ 
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/splash-page.gif" width="800" height="auto">
+<br>
 
-**Feature 2: Search/Filters**
+**businesses index page:**
+  
+ Display a selection of businesses in boxes that match with the user end search/filter query ,each box is clickable and have access to the business single page.
+ 
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/indexpage.png" width="700" height="auto">
+<br>
 
- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/search.png" width="600" height="auto">
- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="600" height="auto">
- <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="600" height="auto">
+**business single page:**
 
-**Feature 3: Reviews/Ratings - CRUD**
+Provides detail information to user include direction, phone numbers, open-hours. And it also contains review component that enables a dynamic user interaction.
 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview%202.gif" width="600" height="auto">
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/showbusiness.png" width="600" height="auto">
+<br>
 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.png" width="600" height="auto">
+<h3>Feature 2: Search/Filters</h3>
 
-**Feature 4: Map - Google Maps**
+ <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/search.png" width="800" height="auto">
+ <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
+ <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="700" height="auto">
+
+<h3>Feature 3: Reviews/Ratings - CRUD</h3>
+
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview%202.gif" width="700" height="auto">
+
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.png" width="700" height="auto">
+
+<h3>Feature 4: Map - Google Maps</h3>
 <!-- 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif" width="600" height="auto"> -->
+<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif" width="700" height="auto"> -->
+
 ![](https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif)
 
 **Bonus: Mark reviews funny, cool, useful etc.**
@@ -41,7 +61,7 @@ This project repository has a great wiki  that you should consider reading! It g
 
 # Tech Stack 
 
-front-end : HTML,CSS,Javascript
+front-end : HTML,CSS,Javascript,React.js,Redux
 
 back-end : SQL, Ruby, Rails
 
