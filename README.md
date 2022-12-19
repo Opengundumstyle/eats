@@ -26,17 +26,22 @@ A single page design that contains three part display element: **splash page**, 
 
 **business single page:**
 
-Provides detail information to user include direction, phone numbers, open-hours. And it also contains review component that enables a dynamic user interaction.
+Provides detail information to user including direction, phone numbers, open-hours...etc, which also contains review component that enables a dynamic user interaction.
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/showbusiness.png" width="600" height="auto">
 <br>
 
 <h3>Feature 2: Search/Filters</h3>
 
+   **search:**
+   Use frontend query to filter key data to obtain businesses that match with search submition on catergory, location, name..etc.
  <img src="https://github.com/Opengundumstyle/eats/blob/main/frontend/components/search.gif" width="800" height="auto">
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
+ 
+   **filter:**
+   
  <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/filter.gif" width="700" height="auto">
-
+  
 <h3>Feature 3: Reviews/Ratings - CRUD</h3>
 
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/writeReview%202.gif" width="700" height="auto">
