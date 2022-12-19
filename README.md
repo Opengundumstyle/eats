@@ -40,7 +40,7 @@ Provides detail information to user including direction, phone numbers, open-hou
    
   <img src="https://github.com/Opengundumstyle/eats/blob/main/frontend/components/search.gif" width="800" height="auto">
   
-  As we type in ramen and click on the search icon, businesses that categorized as ramen are being shown on index page.
+  As we type in "ramen" and click on the search icon, businesses that categorized as "ramen" are being shown on index page.
   
   <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/searchResult.png" width="700" height="auto">
  
