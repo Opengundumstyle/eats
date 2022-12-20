@@ -60,8 +60,8 @@ Registered users are able to create multiple reviews under the business show pag
 <img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/delete-edit-review.png" width="700" height="auto">
 
 <h3>Feature 4: Map - Google Maps</h3>
-<!-- 
-<img src="https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif" width="700" height="auto"> -->
+
+A map component that renders markers based on their corresponding businesses,giving a more indepth visual displacement with business location and infowWindow on hover.
 
 ![](https://github.com/Opengundumstyle/eats/blob/main/app/assets/images/map.gif)
 
