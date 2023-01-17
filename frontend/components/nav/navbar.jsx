@@ -22,12 +22,14 @@ render(){
                         { this.props.currentUser.id === null? '':
                         <div className='inner-filler'>
                             <div className='filler3-div'>
-                                <div id='filler3'><IoChatbubbleEllipsesOutline  size="1.5em" /></div>
-                                    <div className='filler3-hover'>Messages</div>
+                               <a href="https://www.linkedin.com/in/zlin31/" target="_blank"><div id='filler3'><IoChatbubbleEllipsesOutline  size="1.5em" /></div></a>
+                                    {/* <div className='filler3-hover'>Messages</div> */}
+                                    <div className='filler3-hover'>Linkedin</div>
                             </div>
                             <div className='filler4-div'>
-                                <div id='filler4'><FiBell size="1.5em"/></div>
-                                    <div className='filler4-hover'>Notifications</div>
+                             <a href="https://github.com/Opengundumstyle" target="_blank"> <div id='filler4'><FiBell size="1.5em"/></div></a>
+                                    {/* <div className='filler4-hover'>Notifications</div> */}
+                                    <div className='filler4-hover'>Github</div>
                             </div>
                         </div>
                         }  
