@@ -59,14 +59,13 @@ class SearchIndex extends React.Component{
         console.log('wat is the searchindexprops',this.props)
         return(
             <div>
-                <Nav/>
-            <div className="search-index-map">
-
+                <div className='list-nav'> <Nav/></div>
+              <div className="businesses-index-page-box">
                  <div className="filter-div">
-                 <Filter props={this.props}/>
+                   <Filter props={this.props}/>
                  </div>
 
-                <div className="index-search-businesses-info" >
+                <div className="business-index-page" >
                  <h1 className="result-title">All Results</h1>
                  {businesses.length === 0?
                     <p>We couldn't find a match. Please try another search.</p> :
