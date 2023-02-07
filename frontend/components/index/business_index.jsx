@@ -14,7 +14,7 @@ class BusinessIndex extends React.Component {
     render() {
         return (
             <div>
-                 < Navbar/>
+                 <div className='list-nav'>< Navbar/></div>
             <div className='businesses-index-page-box'>
                  <div className='filter-div'>
                     <Filter props={this.props}/>

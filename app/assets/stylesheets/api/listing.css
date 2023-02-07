@@ -11,24 +11,42 @@
      border-radius: 10px 10px 10px 10px;
 }
 
+.list-nav{
+   position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    right:14px;
+    /* z-index:100; */
+}
+
 .businesses-index-page-box{
    font-family: 'Open Sans', sans-serif;
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
+   padding-top: 140px;
+   overflow-y: scroll;
+   height:100vh;
 
 }
 
 
 .buinesses-index-page{
    min-width: 500px;
+   flex:1;
 
 }
-
 .businesses-map{
-  max-width: 250px ;
+  /* max-width: 250px ; */
   position: sticky;
-  top: 100px;
+  top: 1px;
+}
+
+.filter-div{
+   position: sticky;
+   top:1px;
 }
 
 

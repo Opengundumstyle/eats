@@ -1,5 +1,6 @@
 
 .splash-page-div{
+    
      .nav{
        border-bottom: none;
             #filler1 a{
@@ -28,6 +29,9 @@
               }
           }
       } 
+      .splash-img1{
+        width:100%;
+      }
 }
 
 
@@ -100,9 +104,9 @@
         }
 }
 
-.splash-img1{
-    width:100%;
-}
+// .splash-img1{
+//     width:100%;
+// }
 
 .fade-anim img {
   animation: fadeAnim 0.8s ease-out;
