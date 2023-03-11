@@ -84,11 +84,11 @@ render(){
         return(
             <div className='businesses-index-item'
                onClick={this.handleClick} >
-
+                 
                 <div className='index-image-div'>
                     <img className="profile-pic" src={this.props.business.photoUrl}/>
                 </div>
-              
+                   
 
                 <div className='index-info-div'>
                             <div className="index-item-info">
